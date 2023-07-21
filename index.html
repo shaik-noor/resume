@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Resume</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+    <nav id="desktop-nav">
+      <div class="logo">Resume</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Resume</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#certificates" onclick="toggleMenu()">Certificates</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="John Doe profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hi, I'm</p>
+        <h1 class="title">Shaik Noor Mohammad</h1>
+        <p class="section__text__p2" id="typingEffect"></p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume-example.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+              src="./assets/linkedin.png"
+              alt="My LinkedIn profile"
+              class="icon"
+              onclick="openProfile('https://www.linkedin.com/in/shaik-noor/')"/>
+
+          <img
+            src="./assets/github.png"
+            alt="My GitHub profile"
+            class="icon"
+            onclick="openProfile('https://github.com/shaik-noor')"/>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="text-container">
+        <p>Highly motivated Technical Support Engineer experienced in Informatica PowerCenter, Administration, IICS, and data validation. Skilled in providing top-notch customer service and collaborating with clients and data analysts. Eager to contribute expertise to a professional organization and drive impactful results.</p>
+      </div>
+      <div class="section-container">
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"/>
+              <h3>Experience</h3>
+              <p>4+ years </p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"/>
+              <h3>Education</h3>
+              <p>B.Com Bachelors Degree</p>
+            </div>
+          </div>
+          <div class="details-container">
+            <img
+              src="./assets/requirements.png"
+              alt="Education icon"
+              class="icon"/>
+            
+
+            
+              <h3>Skills</h3>
+              <ul class="skills-list">
+                <li>
+                  <img src="./assets/INFA.png" alt="Power Center icon" class="skill-icon" />
+                  <span class="skill-title">Power Center</span>
+                </li>
+                <li>
+                  <img src="./assets/sql-server.png" alt="SQL icon" class="skill-icon" />
+                  <span class="skill-title">SQL</span>
+                </li>
+                <li>
+                  <img src="./assets/oracle_db.png" alt="Oracle DB icon" class="skill-icon" />
+                  <span class="skill-title">Oracle DB</span>
+                </li>
+                <li>
+                  <img src="./assets/js.png" alt="JavaScript icon" class="skill-icon" />
+                  <span class="skill-title">JavaScript</span>
+                </li>
+                <li>
+                  <img src="./assets/python.png" alt="Python icon" class="skill-icon" />
+                  <span class="skill-title">Python</span>
+                </li>
+                <li>
+                  <img src="./assets/html-5.png" alt="HTML icon" class="skill-icon" />
+                  <span class="skill-title">HTML</span>
+                </li>
+                <li>
+                  <img src="./assets/css.png" alt="CSS icon" class="skill-icon" />
+                  <span class="skill-title">CSS</span>
+                </li>
+                <li>
+                  <img src="./assets/linux.png" alt="Linux / Unix icon" class="skill-icon" />
+                  <span class="skill-title">Linux / Unix</span>
+                </li>
+              </ul>
+            </div
+            
+
+
+
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My Experience</p>
+      <h1 class="title">Experience</h1>
+      <div class="section-container">
+        <div class="details-container">
+          <img
+            src="./assets/INFA.png"
+            alt="Experience icon"
+            class="icon"/>
+          <h3>Technical Support Engineer</h3>
+          <p><b>Informatica</b> - Jul 2020 - Present · 3+ yrs</p>
+          <p>I validated addresses, emails & phone numbers with the Data as a Service team. Collaborated with clients & data analysts, offered daily support, and scheduled sessions with product engineers to enhance services.</p>
+        </div>
+        <div class="details-container">
+          <img
+            src="./assets/f1.png"
+            alt="Experience icon"
+            class="icon"/>
+          <h3>Senior Engineer</h3>
+          <p><b>F1 INFO SOLUTIONS & SERVICES PRIVATE LIMITED</b> - Oct 2018 - May 2019 · 8 mos</p>
+          <p>F1 Info Solutions is owned by Flipkart and I was a part of the refurbishing and servicing team, and my primary responsibility was to restore and service electronic devices such as laptops and smartphones, which are resold on Flipkart.</p>
+        </div>
+        <div class="details-container">
+          <img
+            src="./assets/business.png"
+            alt="Experience icon"
+            class="icon"/>
+          <h3>Small Business Owner</h3>
+          <p><b>NR Services</b> - Jul 2017 - Oct 2018 · 1 yr 4 mos</p>
+          <p>I started my own supply chain company, specializing in electronics such as laptops and smartphones, and I was buying and refurbishing gadgets on my own and selling them on the open market.</p>
+        </div>
+        <div class="details-container">
+          <img
+            src="./assets/texmo.png"
+            alt="Experience icon"
+            class="icon"/>
+          <h3>Accountant</h3>
+          <p><b>TEXMO INDUSTRIES</b> - Feb 2016 - Jun 2017 · 1 yr 5 mos</p>
+          <p>As a part-time employee at the Texmo Industries warehouse, I was in charge of monitoring, and accounting, which included keeping track of all transactions, preparing monthly and quarterly reports, and tracking the amount of goods in the warehouse.</p>
+        </div>
+      </div>
+    </section>
+  
+    <section id="certificates">
+      <p class="section__text__p1">Check Out My Certificates</p>
+      <h1 class="title">Certificates</h1>
+      <div class="carousel-container">
+        <div class="carousel">
+          <div class="certificate-slide">
+            <img src="./certificates/Linux Fundamentals.jpg" alt="Linux Fundamentals" />
+            <h3>Linux Fundamentals</h3>
+            <br>
+            <button class="btn btn-color-1">
+              <a href="https://www.coursera.org/account/accomplishments/certificate/S5H39SDTKYPD" target="_blank">Visit Certificate</a>
+            </button>
+          </div>
+          <div class="certificate-slide">
+            <img src="./certificates/Unix Essential Training.png" alt="Unix Essential Training" />
+            <h3>Unix Essential Training</h3>
+            <br>
+            <button class="btn btn-color-1">
+              <a href="https://www.linkedin.com/learning/certificates/cf4c365df01bca16733b77fdf2bc677a06d979acb3788a3f99a085e5a6741294" target="_blank">Visit Certificate</a>
+            </button>
+          </div>
+          <div class="certificate-slide">
+            <img src="./certificates/Learning SQL Programming.png" alt="Learning SQL Programming" />
+            <h3>Learning SQL Programming</h3>
+            <br>
+            <button class="btn btn-color-1">
+              <a href="https://www.linkedin.com/learning/certificates/bdc950289028ce13baf366f187c59495e094a1297ce9b2be7e4a306995cc5216?trk=share_certificate" target="_blank">Visit Certificate</a>
+            </button>
+          </div>
+          <div class="certificate-slide">
+            <img src="./certificates/Getting Started with Git and GitHub.jpg" alt="Getting Started with Git and GitHub" />
+            <h3>Getting Started with Git and GitHub</h3>
+            <br>
+            <button class="btn btn-color-1">
+              <a href="https://www.coursera.org/account/accomplishments/certificate/T8Z2BHCZZSFD" target="_blank">Visit Certificate</a>
+            </button>
+          </div>
+          <div class="certificate-slide">
+            <img src="./certificates/Programming with JavaScript.jpg" alt="Programming with JavaScript" />
+            <h3>Programming with JavaScript</h3>
+            <br>
+            <button class="btn btn-color-1">
+              <a href="https://www.coursera.org/account/accomplishments/certificate/QL5K32N2R2BY" target="_blank">Visit Certificate</a>
+            </button>
+          </div> 
+          <div class="certificate-slide">
+            <img src="./certificates/Introduction to Web Development with HTML, CSS.jpg" alt="Web Development with HTML, CSS, JavaScript Essentials" />
+            <h3>Web Development with HTML, CSS, JavaScript Essentials</h3>
+            <br>
+            <button class="btn btn-color-1">
+              <a href="https://www.credly.com/badges/75fe615c-3632-41d6-8dd9-a52fa5ceac1a?source=linked_in_profile" target="_blank">Visit Certificate</a>
+            </button>
+          </div> 
+          <div class="certificate-slide">
+            <img src="./certificates/CAI_Dev.jpg" alt="Cloud Application Integration Services for Developers" />
+            <h3>Cloud Application Integration Services for Developers</h3>
+            <br>
+            <button class="btn btn-color-1">
+              <a href="" target="_blank">Visit Certificate</a>
+            </button>
+          </div> 
+          <div class="certificate-slide">
+            <img src="./certificates/PC_Admin_Fundamentals.jpg" alt="PowerCenter: Administration Fundamentals" />
+            <h3>PowerCenter: Administration Fundamentals</h3>
+            <br>
+            <button class="btn btn-color-1">
+              <a href="" target="_blank">Visit Certificate</a>
+            </button>
+          </div> 
+          <div class="certificate-slide">
+            <img src="./certificates/INFA_Platform_Admin.jpg" alt="Informatica Platform Administration Fundamentals" />
+            <h3>Informatica Platform Administration Fundamentals</h3>
+            <br>
+            <button class="btn btn-color-1">
+              <a href="" target="_blank">Visit Certificate</a>
+            </button>
+          </div> 
+          <div class="certificate-slide">
+            <img src="./certificates/PC_L2_Dev.jpg" alt="PowerCenter: Developer, Level 2"/>
+            <h3>PowerCenter: Developer, Level 2</h3>
+            <br>
+            <button class="btn btn-color-1">
+              <a href="" target="_blank">Visit Certificate</a>
+            </button>
+          </div> 
+          <div class="certificate-slide">
+            <img src="./certificates/PC_Lev1_Dev.jpg" alt="PowerCenter: Data Integration for Developers" />
+            <h3>PowerCenter: Data Integration for Developers</h3>
+            <br>
+            <button class="btn btn-color-1">
+              <a href="" target="_blank">Visit Certificate</a>
+            </button>
+          </div> 
+          <div class="certificate-slide">
+            <img src="./certificates/Introduction to Cloud Computing.jpg" alt="Introduction to Cloud Computing" />
+            <h3>Introduction to Cloud Computing</h3>
+            <br>
+            <button class="btn btn-color-1">
+              <a href="https://www.coursera.org/account/accomplishments/certificate/92PBMQLY7YF3" target="_blank">Visit Certificate</a>
+            </button>
+          </div> 
+        </div>
+        <div class="slide-indicators"></div>
+        <button class="prev-btn">&#10094;</button>
+        <button class="next-btn">&#10095;</button>
+      </div>
+    </section>
+  </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/gmail.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:examplemail@gmail.com">s.noorink@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+            onclick="openProfile('https://www.linkedin.com/in/shaik-noor/')"/>
+          <p><a href="https://www.linkedin.com/in/shaik-noor/"target="_blank">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <button id="back-to-top" class="btn btn-color-1">Scroll Top</button>
+      <p>Copyright &#169; 2023 Shaik Noor. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
