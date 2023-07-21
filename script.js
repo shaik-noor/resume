@@ -130,8 +130,7 @@ updateSlideIndicators(currentIndex);
   });
   
 
-
-  // script for the typing effect 
+  // work title typing effect 
 
   const stringsToType = [
     { text: "Technical Support Engineer", delay: 100 },

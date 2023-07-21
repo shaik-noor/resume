@@ -44,6 +44,12 @@ nav {
   justify-content: space-around;
   align-items: center;
   height: 10vh;
+  border-bottom: var(--primary-color) 1px solid;
+  border-radius: 30px;
+}
+
+footer nav {
+  border-bottom: none;
 }
 
 .nav-links {
@@ -443,12 +449,6 @@ section {
   margin: 0;
 }
 
-
-.arrow {
-  position:absolute;
-  right: -5rem;
-  bottom: 2.5rem;
-}
 
 .details-container {
   padding: 1.5rem;
