@@ -278,6 +278,52 @@ section {
   gap: 1rem;
 }
 
+/* profile buttons */
+
+.btn-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  margin: 10px;
+}
+
+.list-container {
+  list-style: none;
+  padding: 0;
+  display: none; /* Hidden by default */
+  position: absolute;
+  border: var(--primary-color) 1px solid;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.list-container li {
+  margin: 10px;
+}
+
+.list-container a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+}
+
+.list-container img {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+
+
 /* Back to top button */
 /* #back-to-top {
   display: none;

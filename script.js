@@ -9,6 +9,21 @@ function openProfile(url) {
   window.open(url, '_blank');
 }
 
+// logic to show the list for the download button
+function toggleList() {
+  const listContainer = document.getElementById("listContainer");
+  listContainer.style.display = listContainer.style.display === "block" ? "none" : "block";
+}
+
+// Hide the list on initial load (to ensure it's hidden on mobile)
+document.addEventListener("DOMContentLoaded", function() {
+  const listContainer = document.getElementById("listContainer");
+  listContainer.style.display = "none";
+});
+
+
+//testing new carousel start wiht touch
+
 const carousel = document.querySelector('.carousel');
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
@@ -81,6 +96,124 @@ certificateSlides.forEach((_, index) => {
 // Show the initial slide indicator
 updateSlideIndicators(currentIndex);
 
+// Touch swipe functionality for mobile devices
+let touchStartX = 0;
+let touchEndX = 0;
+
+carousel.addEventListener('touchstart', (e) => {
+  touchStartX = e.touches[0].clientX;
+});
+
+carousel.addEventListener('touchend', (e) => {
+  touchEndX = e.changedTouches[0].clientX;
+  handleSwipe();
+});
+
+function handleSwipe() {
+  const SWIPE_THRESHOLD = 50;
+  const deltaX = touchEndX - touchStartX;
+
+  if (deltaX > SWIPE_THRESHOLD) {
+    // Swiped left to right (previous)
+    showPrevSlide();
+  } else if (deltaX < -SWIPE_THRESHOLD) {
+    // Swiped right to left (next)
+    showNextSlide();
+  }
+}
+// Function to pause the auto loop
+function pauseAutoLoop() {
+  stopAutoLoop();
+}
+
+// Function to resume the auto loop
+function resumeAutoLoop() {
+  startAutoLoop();
+}
+
+// Pause auto loop when touch starts
+certificateSlides.forEach(slide => {
+  slide.addEventListener('touchstart', pauseAutoLoop);
+});
+
+// Resume auto loop when touch ends
+certificateSlides.forEach(slide => {
+  slide.addEventListener('touchend', resumeAutoLoop);
+});
+
+//testing new carousel end
+
+// const carousel = document.querySelector('.carousel');
+// const prevBtn = document.querySelector('.prev-btn');
+// const nextBtn = document.querySelector('.next-btn');
+// const certificateSlides = document.querySelectorAll('.certificate-slide');
+// const slideIndicatorsContainer = document.querySelector('.slide-indicators');
+
+// let currentIndex = 0;
+// const slideWidth = certificateSlides[0].offsetWidth;
+
+// function showSlide(index) {
+//   carousel.style.transform = `translateX(-${index * slideWidth}px)`;
+//   updateSlideIndicators(index);
+// }
+
+// function showNextSlide() {
+//   currentIndex++;
+//   if (currentIndex >= certificateSlides.length) {
+//     currentIndex = 0;
+//   }
+//   showSlide(currentIndex);
+// }
+
+// function showPrevSlide() {
+//   currentIndex--;
+//   if (currentIndex < 0) {
+//     currentIndex = certificateSlides.length - 1;
+//   }
+//   showSlide(currentIndex);
+// }
+
+// function updateSlideIndicators(currentIndex) {
+//   const slideIndicators = document.querySelectorAll('.slide-indicator');
+//   slideIndicators.forEach((indicator, index) => {
+//     if (index === currentIndex) {
+//       indicator.classList.add('active');
+//     } else {
+//       indicator.classList.remove('active');
+//     }
+//   });
+// }
+
+// nextBtn.addEventListener('click', showNextSlide);
+// prevBtn.addEventListener('click', showPrevSlide);
+
+// // Auto loop the carousel
+// let intervalId;
+
+// function startAutoLoop() {
+//   intervalId = setInterval(showNextSlide, 3000);
+// }
+
+// function stopAutoLoop() {
+//   clearInterval(intervalId);
+// }
+
+// startAutoLoop();
+
+// // Pause auto loop on hover
+// carousel.addEventListener('mouseenter', stopAutoLoop);
+// carousel.addEventListener('mouseleave', startAutoLoop);
+
+// // Create slide indicators and add event listeners
+// certificateSlides.forEach((_, index) => {
+//   const indicator = document.createElement('div');
+//   indicator.classList.add('slide-indicator');
+//   indicator.addEventListener('click', () => showSlide(index));
+//   slideIndicatorsContainer.appendChild(indicator);
+// });
+
+// // Show the initial slide indicator
+// updateSlideIndicators(currentIndex);
 
 
   document.addEventListener("DOMContentLoaded", function () {
