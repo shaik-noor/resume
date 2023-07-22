@@ -6,6 +6,7 @@ script.js
 
 # Ignore a directory and its contents
 directory_to_ignore/
+certificates/
 
 # Ignore all .txt files in any subdirectory
 **/*.txt
