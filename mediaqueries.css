@@ -1,5 +1,5 @@
-/* Media query for screen sizes up to 1600px */
-@media screen and (max-width: 1600px) {
+/* Media query for screen sizes up to 3400px */
+@media screen and (max-width: 3400px) {
   #profile {
     height: 96vh;
     padding-top: 50px;
