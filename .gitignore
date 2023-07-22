@@ -1,5 +1,5 @@
 # Ignore specific file
-script.js
+
 
 # Ignore all files with .log extension
 *.log
