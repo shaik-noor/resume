@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./assets/profile-pic.png" type="image">
+    <link rel="icon" href="./assets/profile-pic.webp" type="image">
     <title>Shaik Noor - Resume</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
@@ -38,9 +38,10 @@
     </nav>
     <section id="profile">
       <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="Shaik Noor profile picture" />
+        <img src="./assets/profile-pic-transperent.png" alt="Shaik Noor profile picture" />
       </div>
       <div class="section__text">
+        <div class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</div>
         <p class="section__text__p1">Hi, I'm</p>
         <h1 class="title">Shaik Noor Mohammad</h1>
         <p class="section__text__p2" id="typingEffect"></p>
@@ -60,13 +61,13 @@
           <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
           <ul class="list-container" id="listContainer">
             <li>
-              <a href="https://github.com" target="_blank">
+              <a href="https://github.com/shaik-noor/resume/blob/main/assets/shaik_noor_resume.pdf" target="_blank">
                 <img src="./assets/github.png" alt="GitHub" />
                 Download From GitHub
               </a>
             </li>
             <li>
-              <a href="https://drive.google.com">
+              <a href="https://drive.google.com/file/d/1V-Ku9TIhT8EvPGaaOJK48O2B3llqgMmV/view?usp=drive_link" target="_blank">
                 <img src="./assets/google-drive.png" alt="Drive" />
                 Download From Drive
               </a>
@@ -216,7 +217,7 @@
       <div class="carousel-container">
         <div class="carousel">
           <div class="certificate-slide">
-            <img src="./certificates/Linux Fundamentals.jpg" alt="Linux Fundamentals" />
+            <img src="./certificates_low_res/Linux Fundamentals.webp" alt="Linux Fundamentals" />
             <h3>Linux Fundamentals</h3>
             <br>
             <button class="btn btn-color-1">
@@ -224,7 +225,7 @@
             </button>
           </div>
           <div class="certificate-slide">
-            <img src="./certificates/Unix Essential Training.png" alt="Unix Essential Training" />
+            <img src="./certificates_low_res/Unix Essential Training.webp" alt="Unix Essential Training" />
             <h3>Unix Essential Training</h3>
             <br>
             <button class="btn btn-color-1">
@@ -232,7 +233,7 @@
             </button>
           </div>
           <div class="certificate-slide">
-            <img src="./certificates/Learning SQL Programming.png" alt="Learning SQL Programming" />
+            <img src="./certificates_low_res/Learning SQL Programming.webp" alt="Learning SQL Programming" />
             <h3>Learning SQL Programming</h3>
             <br>
             <button class="btn btn-color-1">
@@ -240,7 +241,7 @@
             </button>
           </div>
           <div class="certificate-slide">
-            <img src="./certificates/Getting Started with Git and GitHub.jpg" alt="Getting Started with Git and GitHub" />
+            <img src="./certificates_low_res/Getting Started with Git and GitHub.webp" alt="Getting Started with Git and GitHub" />
             <h3>Getting Started with Git and GitHub</h3>
             <br>
             <button class="btn btn-color-1">
@@ -248,7 +249,7 @@
             </button>
           </div>
           <div class="certificate-slide">
-            <img src="./certificates/Programming with JavaScript.jpg" alt="Programming with JavaScript" />
+            <img src="./certificates_low_res/Programming with JavaScript.webp" alt="Programming with JavaScript" />
             <h3>Programming with JavaScript</h3>
             <br>
             <button class="btn btn-color-1">
@@ -256,7 +257,7 @@
             </button>
           </div> 
           <div class="certificate-slide">
-            <img src="./certificates/Introduction to Web Development with HTML, CSS.jpg" alt="Web Development with HTML, CSS, JavaScript Essentials" />
+            <img src="./certificates_low_res/Introduction to Web Development with HTML, CSS.webp" alt="Web Development with HTML, CSS, JavaScript Essentials" />
             <h3>Web Development with HTML, CSS, JavaScript Essentials</h3>
             <br>
             <button class="btn btn-color-1">
@@ -264,7 +265,7 @@
             </button>
           </div> 
           <div class="certificate-slide">
-            <img src="./certificates/CAI_Dev.jpg" alt="Cloud Application Integration Services for Developers" />
+            <img src="./certificates_low_res/CAI_Dev.webp" alt="Cloud Application Integration Services for Developers" />
             <h3>Cloud Application Integration Services for Developers</h3>
             <br>
             <button class="btn btn-color-1">
@@ -272,7 +273,7 @@
             </button>
           </div> 
           <div class="certificate-slide">
-            <img src="./certificates/PC_Admin_Fundamentals.jpg" alt="PowerCenter: Administration Fundamentals" />
+            <img src="./certificates_low_res/PC_Admin_Fundamentals.webp" alt="PowerCenter: Administration Fundamentals" />
             <h3>PowerCenter: Administration Fundamentals</h3>
             <br>
             <button class="btn btn-color-1">
@@ -280,7 +281,7 @@
             </button>
           </div> 
           <div class="certificate-slide">
-            <img src="./certificates/INFA_Platform_Admin.jpg" alt="Informatica Platform Administration Fundamentals" />
+            <img src="./certificates_low_res/INFA_Platform_Admin.webp" alt="Informatica Platform Administration Fundamentals" />
             <h3>Informatica Platform Administration Fundamentals</h3>
             <br>
             <button class="btn btn-color-1">
@@ -288,7 +289,7 @@
             </button>
           </div> 
           <div class="certificate-slide">
-            <img src="./certificates/PC_L2_Dev.jpg" alt="PowerCenter: Developer, Level 2"/>
+            <img src="./certificates_low_res/PC_L2_Dev.webp" alt="PowerCenter: Developer, Level 2"/>
             <h3>PowerCenter: Developer, Level 2</h3>
             <br>
             <button class="btn btn-color-1">
@@ -296,7 +297,7 @@
             </button>
           </div> 
           <div class="certificate-slide">
-            <img src="./certificates/PC_Lev1_Dev.jpg" alt="PowerCenter: Data Integration for Developers" />
+            <img src="./certificates_low_res/PC_Lev1_Dev.webp" alt="PowerCenter: Data Integration for Developers" />
             <h3>PowerCenter: Data Integration for Developers</h3>
             <br>
             <button class="btn btn-color-1">
@@ -304,7 +305,7 @@
             </button>
           </div> 
           <div class="certificate-slide">
-            <img src="./certificates/Introduction to Cloud Computing.jpg" alt="Introduction to Cloud Computing" />
+            <img src="./certificates_low_res/Introduction to Cloud Computing.webp" alt="Introduction to Cloud Computing" />
             <h3>Introduction to Cloud Computing</h3>
             <br>
             <button class="btn btn-color-1">
