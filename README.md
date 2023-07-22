@@ -1,17 +1,15 @@
 # Shaik Noor - Resume 👨‍💼
 This web page serves as Shaik Noor's resume. It showcases various sections, each providing different information about Shaik Noor, his skills, experience, certificates, and contact details. 🚀
 
-<div style="background-color: #00FFFF; color: black; padding: 10px;">
+
 If you want the full CSS and JavaScript code with proper comments and un-minified versions, feel free to contact me on LinkedIn, and I'll be happy to share the repository or the code directly with you. 
-</div><br>
+
+<span style="background-color: yellow; padding: 5px;">This text will have a yellow background.</span>
+
+👉 [My LinkedIn Profile](https://www.linkedin.com/in/shaik-noor/{:target="_blank"})
 
 
-[My LinkedIn Profile](https://www.linkedin.com/in/shaik-noor/{:target="_blank"})
-
-
-<div style="background-color: #00FFFF; color: black; padding: 10px;">
 The reason behind minifying the CSS and JavaScript is to decrease the file size and improve the performance.
-</div>
 
 ## Features and Functions ✨
 ### Navigation Bar: 
