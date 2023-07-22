@@ -300,8 +300,9 @@ section {
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #f9f9f9;
+  background-color: var(--accent-color-1);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1; /* Ensure the list is on top of other elements */
 }
 
 .list-container li {
@@ -321,20 +322,6 @@ section {
   max-width: 50px;
   max-height: 50px;
 }
-
-
-
-/* Back to top button */
-/* #back-to-top {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-  cursor: pointer;
-  font-size: 14px;
-  padding: 5px;
-} */
 
 
 #back-to-top {
