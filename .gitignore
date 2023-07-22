@@ -1,0 +1,11 @@
+# Ignore specific file
+script.js
+
+# Ignore all files with .log extension
+*.log
+
+# Ignore a directory and its contents
+directory_to_ignore/
+
+# Ignore all .txt files in any subdirectory
+**/*.txt
