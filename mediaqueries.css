@@ -1,6 +1,4 @@
-
 /* Media query for screen sizes up to 1600px */
-
 @media screen and (max-width: 1600px) {
   #profile {
     height: 96vh;
@@ -19,55 +17,18 @@
     z-index: 1000;
     transition: transform 0.3s ease-in-out;
   }
-
   /* Hide the desktop navigation when scrolling down */
   #desktop-nav.nav-hidden {
     transform: translateY(-100%);
   }
-
   /* Show the desktop navigation when scrolling up */
   #desktop-nav.nav-visible {
     transform: translateY(0);
   }
-}
-#hamburger-nav {
-  display: none;
-}
-
-/* Media query for screen sizes up to 1400px */
-@media screen and (max-width: 1400px) {
-    #profile {
-      height: 96vh;
-      padding-top: 50px;
-    }
-    #experience {
-      height: 100%;
-    }
-    /* Make the desktop navigation sticky */
-    #desktop-nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: #fff;
-      z-index: 1000;
-      transition: transform 0.3s ease-in-out;
-    }
-  
-    /* Hide the desktop navigation when scrolling down */
-    #desktop-nav.nav-hidden {
-      transform: translateY(-100%);
-    }
-  
-    /* Show the desktop navigation when scrolling up */
-    #desktop-nav.nav-visible {
-      transform: translateY(0);
-    }
-  }
   #hamburger-nav {
     display: none;
   }
-  
+}
 
   /* Media query for screen sizes up to 1000px */
   @media screen and (max-width: 1000px) {
