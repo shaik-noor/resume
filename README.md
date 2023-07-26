@@ -2,7 +2,7 @@
 This web page serves as Shaik Noor's resume. It showcases various sections, each providing different information about Shaik Noor, his skills, experience, certificates, and contact details. 🚀
 
 
-📢 If you want the full CSS and JavaScript code with proper comments and un-minified versions, feel free to contact me on LinkedIn, and I'll be happy to share the repository or the code directly with you. 
+📢 If you want the full HTML, CSS and JavaScript code with proper comments feel free to check the repository on GitHub. 
 
 
 👉 [My LinkedIn Profile](https://www.linkedin.com/in/shaik-noor/{:target="_blank"}) 👈
