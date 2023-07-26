@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/mediaqueries.css" />
   </head>
+  <body>
     <nav id="desktop-nav">
       <div class="logo">Resume</div>
       <div>
@@ -309,32 +310,30 @@
       </div>
     </section>
 
-  <section id="contact">
-    <p class="section__text__p1">Get in Touch</p>
-    <h1 class="title">Contact Me</h1>
-    <div class="contact-info-upper-container">
-      <div class="contact-info-container">
-        <img
-          src="./assets/gmail.png"
-          alt="Email icon"
-          class="icon contact-icon email-icon"
-        />
-        <p><a href="mailto:s.noorink@gmail.com">s.noorink@gmail.com</a></p>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/gmail.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:s.noorink@gmail.com">s.noorink@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+            onclick="openProfile('https://www.linkedin.com/in/shaik-noor/')"/>
+          <p><a href="https://www.linkedin.com/in/shaik-noor/"target="_blank">LinkedIn</a></p>
+        </div>
       </div>
-      <div class="contact-info-container">
-        <img
-          src="./assets/linkedin.png"
-          alt="LinkedIn icon"
-          class="icon contact-icon"
-          onclick="openProfile('https://www.linkedin.com/in/shaik-noor/')"/>
-        <p><a href="https://www.linkedin.com/in/shaik-noor/"target="_blank">LinkedIn</a></p>
-      </div>
-    </div>
-    <div id="scroll-arrow" class="arrow"></div>
-  </section>
-  
+      <div id="scroll-arrow" class="arrow"></div>
+    </section>
     <footer>
-      
       <nav>
         <div class="nav-links-container">
           <ul class="nav-links">
@@ -345,11 +344,9 @@
           </ul>
         </div>
       </nav>
-      
-      <!-- <button id="back-to-top" class="btn btn-color-1">Scroll Top</button> -->
+      <button id="back-to-top" class="btn btn-color-1">Scroll Top</button>
       <p>Copyright &#169; 2023 Shaik Noor. All Rights Reserved.</p>
-      
     </footer>
     <script src="js/script.js"></script>
-  </body>
+</body>
 </html>

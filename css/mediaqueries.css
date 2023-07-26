@@ -205,12 +205,6 @@
   
   /* Media query for screen sizes up to 600px */
   @media screen and (max-width: 600px) {
-    /* Styles for screen sizes up to 600px */
-    /* #contact,
-    footer {
-      height: 20vh;
-    } */
-  
     #profile {
       height: 70vh;
       margin-bottom: 0;
