@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 /* GENERAL */
 :root {
   --primary-color: #FF4D00;
@@ -5,13 +6,10 @@
   --accent-color-1: #fafafa;
   --accent-color-2: #fff;
   --blue-button: #001aff;
-  --highlight-color: #f2e365;
-  /* testing the dark color */
   /* Dark mode colors */
   --dark-bg-color: #1b1b1b;
   --dark-text-color: #f2f2f2;
 }
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 * {
   margin: 0;
@@ -24,13 +22,6 @@ body {
   color: var(--secondary-color); /* Set default text color testing*/
   background-color: var(--accent-color-2); /* Set default background color testing*/
 }
-
-/* Set dark mode styles */
-body.dark-mode {
-  color: var(--dark-text-color);
-  background-color: var(--dark-bg-color);
-}
-
 
 html {
   scroll-behavior: smooth;
@@ -361,35 +352,6 @@ section {
   }
 
 
-
-/* ABOUT SECTION */
-
-/* #about {
-  position: relative;
-  ;
-}
-
-.about-containers {
-  gap: 2rem;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-}
-
-.about-details-container {
-  justify-content: center;
-  flex-direction: column;
-}
-
-.about-containers,
-.about-details-container {
-  display: flex;
-}
-
-.about-pic {
-  border-radius: 2rem;
-} */
-
-
 /* Container for the skills section */
 .details-container {
   max-width: 600px;
@@ -493,7 +455,6 @@ section {
   margin: 0;
 }
 
-
 .details-container {
   padding: 1.5rem;
   flex: 1;
@@ -557,10 +518,6 @@ section {
 
 
 /* certificates */
-
-/* #certificates {
-  position: relative;
-} */
 
 .carousel-container {
   position: relative;
@@ -675,8 +632,6 @@ footer p {
   text-align: center;
 }
 
-
-
 .btn.btn-color-1 a {
     text-decoration: none;
     color: #fafafa;
@@ -688,9 +643,11 @@ footer p {
     text-decoration: none;
     /* Add any other specific hover styles for the link inside the button here if needed */
   }
-
-
-  /* dark mode testing start*/
+/* dark mode */
+body.dark-mode {
+  color: var(--dark-text-color);
+  background-color: var(--dark-bg-color);
+}
 
 /* Adjust specific elements to use dark mode colors */
 nav {
@@ -798,7 +755,10 @@ body.dark-mode .list-container a {
 .list-container a{
   text-decoration: none;
 }
+<<<<<<< HEAD
 
 
   /* dark mode testing end */
 
+=======
+>>>>>>> 31893925228c819dc06ba3ca6617f02f631cd2c9
