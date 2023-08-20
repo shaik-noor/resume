@@ -254,3 +254,28 @@ window.onload = () => {
   cursorBlink();
 };
 
+// loading projects using AJAX (Asynchronous JavaScript and XML)...Enjoy!
+
+const frontEndBtn = document.getElementById("frontEndBtn");
+const backEndBtn = document.getElementById("backEndBtn");
+const fullStackBtn = document.getElementById("fullStackBtn");
+const projectsArea = document.getElementById("projectsArea");
+
+function loadProjectContent(category) {
+  const xhr = new XMLHttpRequest();
+  xhr.open("GET", `${category}.html`, true);
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      projectsArea.innerHTML = xhr.responseText;
+    }
+  };
+  xhr.send();
+}
+
+frontEndBtn.addEventListener("click", () => loadProjectContent("frontEnd"));
+backEndBtn.addEventListener("click", () => loadProjectContent("backEnd"));
+fullStackBtn.addEventListener("click", () => loadProjectContent("fullStack"));
+// Load frontend project content when the page loads (default)
+window.addEventListener("load", () => {
+  loadProjectContent("frontEnd"); // Load the frontend content by default
+});
