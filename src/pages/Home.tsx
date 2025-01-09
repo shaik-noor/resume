@@ -29,7 +29,7 @@ export default function Home() {
                 <div className="overflow-hidden rounded-lg">
                   <img
                     className="min-w-[250px] scale-110 object-cover"
-                    src="./src/assets/Noor_HD.jpg"
+                    src="./Noor_HD.jpg"
                     alt="Shaik Noor"
                   />
                 </div>
