@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <>
-      <main className="flex h-full items-center justify-center pt-10">
+      <main className="flex items-center justify-center py-10">
         <div className="container mx-auto px-6 py-6">
           {/* How It Works Section */}
           <section className="space-y-12">
