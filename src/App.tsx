@@ -3,10 +3,16 @@ import { Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import TopHeader from "./components/Header";
 import { ThemeProvider } from "@/components/theme-provider";
+import NotFound from "./pages/NotFound";
+import WorkExperience from "./pages/WorkExperience";
+import Skills from "./pages/Skills";
+import Certificates from "./pages/Certificates";
+import Training from "./pages/Training";
+import Education from "./pages/Education";
+import Contact from "./pages/Contact";
 
 // Lazy load pages
 const Home = React.lazy(() => import("./pages/Home"));
-const About = React.lazy(() => import("./pages/About"));
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(() => {
@@ -42,15 +48,25 @@ function App() {
             isSidebarOpen ? "md:ml-64" : "md:ml-16"
           }`}
         >
+          {/* Top Header */}
           <TopHeader
             isMobileSidebarOpen={isMobileSidebarOpen}
             setIsMobileSidebarOpen={toggleMobileSidebar}
           />
-          <main className="p-4">
+
+          {/* Main Content Area */}
+          <main className="p-4 mt-[64px]">
+            {/* Adjust mt-[64px] to match your TopHeader's height */}
             <Suspense fallback={<div>Loading...</div>}>
               <Routes>
+                <Route path="*" element={<NotFound />} />
                 <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
+                <Route path="/work-experience" element={<WorkExperience />} />
+                <Route path="/skills" element={<Skills />} />
+                <Route path="/certificates" element={<Certificates />} />
+                <Route path="/training" element={<Training />} />
+                <Route path="/education" element={<Education />} />
+                <Route path="/contact" element={<Contact />} />
               </Routes>
             </Suspense>
           </main>
