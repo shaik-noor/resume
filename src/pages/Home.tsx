@@ -1,3 +1,10 @@
+import { Button } from "@/components/ui/button";
+import { Contact, DownloadIcon, GithubIcon } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const goToGithub = () => {
+  window.open("https://github.com/shaik-noor", "_blank");
+};
 export default function Home() {
   return (
     <>
@@ -11,7 +18,7 @@ export default function Home() {
                 <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
                   About
                 </h1>
-                <hr className="mb-2" />
+                <hr className="mb-2 mt-1" />
                 <p className="text-lg leading-relaxed">
                   Hi, I&apos;m Shaik Noor Mohammad, a software engineer
                   currently working at{" "}
@@ -23,6 +30,11 @@ export default function Home() {
                   collaborating with cross-functional teams to deliver effective
                   solutions.
                 </p>
+                <div className="flex gap-4 mt-4">
+                  <Button variant="outline" className="mt-4"><Contact/><Link to={"/contact"}>Contact</Link></Button>
+                  <Button variant="outline" onClick={goToGithub} className="mt-4"><GithubIcon/>Github</Button>
+                  <Button variant="outline" className="mt-4"><DownloadIcon/>Download Resume</Button>
+                </div>
               </div>
               {/* Rounded Image Container */}
               <div className="inline-block rounded-lg shadow-xl">
