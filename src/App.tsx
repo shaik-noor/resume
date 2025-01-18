@@ -12,6 +12,7 @@ import Certificates from "./pages/Certificates";
 import Projects from "./pages/Projects.tsx";
 import Education from "./pages/Education";
 import Contact from "./pages/Contact";
+import JourneyBlog from "@/pages/JourneyBlog .tsx";
 
 // Lazy load pages
 const Home = React.lazy(() => import("./pages/About.tsx"));
@@ -34,7 +35,7 @@ function App() {
   };
 
   return (
-      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
         <div className="flex">
           {/* Sidebar */}
           <Sidebar
@@ -70,6 +71,7 @@ function App() {
                     <Route path="/projects" element={<Projects />} />
                     <Route path="/education" element={<Education />} />
                     <Route path="/contact" element={<Contact />} />
+                    <Route path="/journey-blog" element={<JourneyBlog />} />
                   </Routes>
                 </Suspense>
               </div>

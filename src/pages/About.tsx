@@ -18,8 +18,8 @@ export default function About() {
                   About
                 </h1>
                 <hr className="mb-2 mt-1 h-0.5 bg-primary border-none"/>
-                <p className="text-lg leading-relaxed">
-                  Hi, I&apos;m Shaik Noor Mohammad, a software engineer currently
+                <p className="text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+                  Hi, I&apos;m Shaik Noor Mohammad, a software engineer with over 5 years of experience currently
                   working at{" "}
                   <span className="text-orange-500">Informatica</span> on the
                   PowerCenter product. I specialize in providing expert-level
