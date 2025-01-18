@@ -9,6 +9,7 @@ import {
   Mail, Presentation,
   ShieldCheckIcon,
   UserCheck,
+  Route,
 } from "lucide-react";
 
 import {
@@ -219,6 +220,13 @@ function SidebarLinks({
           label="Contact"
           isSidebarOpen={isSidebarOpen}
           onClick={handleLinkClick}
+        />
+        <SidebarLink
+            to="/journey-blog"
+            icon={<Route className="text-gray-600 dark:text-gray-400" />}
+            label="Journey Blog"
+            isSidebarOpen={isSidebarOpen}
+            onClick={handleLinkClick}
         />
       </nav>
     </TooltipProvider>
