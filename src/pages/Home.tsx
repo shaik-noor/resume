@@ -9,7 +9,7 @@ const goToGithub = () => {
 export default function Home() {
   return (
       <>
-        <main className="min-h-screen flex items-center justify-center overflow-auto">
+        <main className=" flex items-center justify-center overflow-auto">
           <div className="container mx-auto px-6 py-12">
             <section className="flex flex-col md:flex-row items-center justify-between gap-12 ">
               {/* About Section */}

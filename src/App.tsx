@@ -19,7 +19,7 @@ const Home = React.lazy(() => import("./pages/Home"));
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(() => {
     const storedState = localStorage.getItem("sidebar-state");
-    return storedState === "open" ? true : false;
+    return storedState === "open" ;
   });
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
 
