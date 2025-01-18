@@ -11,17 +11,9 @@ const WorkExperience = () => {
                 <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
                 Work Experience
                 </h1>
-                <hr className="mb-2 mt-1" />
+                <hr className="mb-2 mt-1 h-0.5 bg-primary border-none"/>
                 <p className="text-lg leading-relaxed">
-                  Hi, I&apos;m Shaik Noor Mohammad, a software engineer
-                  currently working at{" "}
-                  <span className="text-orange-500">Informatica</span> on the
-                  PowerCenter product. I specialize in providing expert-level
-                  technical assistance and troubleshooting to clients, ensuring
-                  the seamless operation of their systems. My role involves
-                  diagnosing and resolving complex software issues and
-                  collaborating with cross-functional teams to deliver effective
-                  solutions.
+
                 </p>
                 
               </div>

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import {Button} from "@/components/ui/button.tsx";
 
 const NotFound: React.FC = () => {
-  const [countdown, setCountdown] = useState<number>(5); // Countdown timer state
+  const [countdown, setCountdown] = useState<number>(10); // Countdown timer state
   const navigate = useNavigate(); // For programmatic navigation
 
   useEffect(() => {
@@ -24,26 +25,33 @@ const NotFound: React.FC = () => {
   }, [navigate]);
 
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <h1>404 - Page Not Found</h1>
-      <p>Oops, the page you're looking for doesn't exist.</p>
-      <p>Redirecting to the homepage in {countdown} seconds...</p>
-      <button
-        onClick={() => navigate("/")}
-        style={{
-          marginTop: "20px",
-          padding: "10px 20px",
-          backgroundColor: "#007bff",
-          color: "white",
-          border: "none",
-          borderRadius: "5px",
-          cursor: "pointer",
-        }}
-      >
-        Go to Home
-      </button>
-    </div>
-  );
+
+    <main className="flex items-center justify-center py-10">
+        <div className="container mx-auto px-6 py-6">
+            {/* How It Works Section */}
+            <section className="space-y-12">
+                <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
+                    {/* About Section */}
+                    <div className="text-center md:text-left">
+                        <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+                            404 - Page Not Found
+                        </h1>
+                        <hr className="mb-2 mt-1 h-0.5 bg-primary border-none"/>
+                        <p>Oops, the page you're looking for doesn't exist.</p>
+                        <p>Redirecting to the homepage in {countdown} seconds...</p>
+                        <div className="mt-4">
+                        <Button onClick={() => navigate("/")}>
+                            Go to Home
+                        </Button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </main>
+)
+    ;
 };
 
 export default NotFound;
