@@ -1,27 +1,26 @@
 import { Button } from "@/components/ui/button";
-import { Contact, DownloadIcon, GithubIcon } from "lucide-react";
+import {Contact, DownloadIcon, GithubIcon, User} from "lucide-react";
 import { Link } from "react-router-dom";
 
 const goToGithub = () => {
-  window.open("https://github.com/shaik-noor", "_blank");
+  window.open("https://noruj.com/contact", "_blank");
 };
+
 export default function Home() {
   return (
-    <>
-      <main className="flex items-center justify-center py-10">
-        <div className="container mx-auto px-6 py-6">
-          {/* How It Works Section */}
-          <section className="space-y-12">
-            <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
+      <>
+        <main className="min-h-screen flex items-center justify-center overflow-auto">
+          <div className="container mx-auto px-6 py-12">
+            <section className="flex flex-col md:flex-row items-center justify-between gap-12 ">
               {/* About Section */}
-              <div className="text-center md:text-left">
-                <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+              <div className="md:w-1/2 text-center md:text-left space-y-6">
+                <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl">
                   About
                 </h1>
-                <hr className="mb-2 mt-1" />
+                <hr className="mb-2 mt-1 h-0.5 bg-primary border-none"/>
                 <p className="text-lg leading-relaxed">
-                  Hi, I&apos;m Shaik Noor Mohammad, a software engineer
-                  currently working at{" "}
+                  Hi, I&apos;m Shaik Noor Mohammad, a software engineer currently
+                  working at{" "}
                   <span className="text-orange-500">Informatica</span> on the
                   PowerCenter product. I specialize in providing expert-level
                   technical assistance and troubleshooting to clients, ensuring
@@ -30,26 +29,42 @@ export default function Home() {
                   collaborating with cross-functional teams to deliver effective
                   solutions.
                 </p>
-                <div className="flex gap-4 mt-4">
-                  <Button variant="outline" className="mt-4"><Contact/><Link to={"/contact"}>Contact</Link></Button>
-                  <Button variant="outline" onClick={goToGithub} className="mt-4"><GithubIcon/>Github</Button>
-                  <Button variant="outline" className="mt-4"><DownloadIcon/>Download Resume</Button>
+                <div className="flex flex-wrap gap-4">
+                  <Button variant="outline" className="flex items-center gap-2">
+                    <User/>
+                    <Link target="_blank" to={"https://portfolio.noruj.com"}>Portfolio</Link>
+                  </Button>
+                  <Button
+                      variant="outline"
+                      onClick={goToGithub}
+                      className="flex items-center gap-2"
+                  >
+                    <GithubIcon/>
+                    Github
+                  </Button>
+                  <Button variant="outline" className="flex items-center gap-2">
+                    <DownloadIcon/>
+                    Download Resume
+                  </Button>
+                  <Button variant="outline" className="flex items-center gap-2">
+                    <Contact/>
+                    <Link to={"/contact"}>Contact</Link>
+                  </Button>
                 </div>
               </div>
-              {/* Rounded Image Container */}
-              <div className="inline-block rounded-lg shadow-xl">
-                <div className="overflow-hidden rounded-lg">
+              {/* Image Section */}
+              <div className="md:w-1/2 flex justify-center">
+                <div className="rounded-lg shadow-xl overflow-hidden max-w-[300px]">
                   <img
-                    className="min-w-[250px] scale-110 object-cover"
-                    src="./Noor_HD.jpg"
-                    alt="Shaik Noor"
+                      className="w-full h-auto object-cover scale-105"
+                      src="./Noor_HD.jpg"
+                      alt="Shaik Noor"
                   />
                 </div>
               </div>
-            </div>
-          </section>
-        </div>
-      </main>
-    </>
+            </section>
+          </div>
+        </main>
+      </>
   );
 }

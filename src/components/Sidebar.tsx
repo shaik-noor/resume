@@ -1,13 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import {
   BriefcaseBusinessIcon,
   ChevronsLeft,
   ChevronsRight,
   GraduationCap,
   Home,
-  Mail,
-  NotebookPen,
+  Mail, Presentation,
   ShieldCheckIcon,
   UserCheck,
 } from "lucide-react";
@@ -17,7 +16,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "./ui/tooltip"; // Adjust path as needed
+} from "./ui/tooltip";
 
 type SidebarProps = {
   isSidebarOpen: boolean;
@@ -40,7 +39,7 @@ export default function Sidebar({
     <>
       {/* Mobile Sidebar */}
       <aside
-        className={`fixed inset-y-0 left-0 z-50 transform dark:bg-gray-900  text-gray-400 shadow-lg transition-transform duration-300 ${
+        className={`fixed inset-y-0 left-0 z-50 transform dark:bg-gray-900 bg-white  shadow-lg transition-transform duration-300 ${
           isMobileSidebarOpen ? "translate-x-0" : "-translate-x-full"
         } md:hidden`}
       >
@@ -96,54 +95,61 @@ export default function Sidebar({
 }
 
 function SidebarLink({
-  to,
-  icon,
-  label,
-  isSidebarOpen,
-  onClick,
-}: {
+                       to,
+                       icon,
+                       label,
+                       isSidebarOpen,
+                       onClick,
+                     }: {
   to: string;
   icon: React.ReactNode;
   label: string;
   isSidebarOpen: boolean;
   onClick?: () => void;
 }) {
-  return (
-    <Tooltip>
-      <TooltipTrigger asChild>
-        <Link
-          to={to}
-          className={`flex items-center px-4 py-3 hover:bg-secondary`}
-          onClick={onClick}
-          style={{
-            height: "48px", // Fixed height for each item
-          }}
-        >
-          {/* Icon Container with Fixed Width */}
-          <div
-            className="flex justify-center items-center"
-            style={{ width: "40px" }} // Fixed width for icons
-          >
-            {icon}
-          </div>
+  const location = useLocation();
+  const isActive = location.pathname === to;
 
-          {/* Label */}
-          {isSidebarOpen && (
-            <span
-              className="ml-3 truncate text-gray-600 dark:text-gray-400"
-              style={{ maxWidth: "160px" }} // Prevent labels from overflowing
+  return (
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <Link
+              to={to}
+              className={`flex items-center px-4 py-3 ${
+                  isActive
+                      ? "bg-secondary "
+                      : "hover:bg-secondary text-gray-600 dark:text-gray-400"
+              }`}
+              onClick={onClick}
+              style={{
+                height: "48px", // Fixed height for each item
+              }}
+          >
+            {/* Icon Container with Fixed Width */}
+            <div
+                className="flex justify-center items-center"
+                style={{ width: "40px" }} // Fixed width for icons
             >
+              {icon}
+            </div>
+
+            {/* Label */}
+            {isSidebarOpen && (
+                <span
+                    className="ml-3 truncate"
+                    style={{ maxWidth: "160px" }} // Prevent labels from overflowing
+                >
               {label}
             </span>
-          )}
-        </Link>
-      </TooltipTrigger>
-      {!isSidebarOpen && (
-        <TooltipContent side="right" align="center">
-          <p>{label}</p>
-        </TooltipContent>
-      )}
-    </Tooltip>
+            )}
+          </Link>
+        </TooltipTrigger>
+        {!isSidebarOpen && (
+            <TooltipContent side="right" align="center">
+              <p>{label}</p>
+            </TooltipContent>
+        )}
+      </Tooltip>
   );
 }
 
@@ -194,9 +200,9 @@ function SidebarLinks({
           onClick={handleLinkClick}
         />
         <SidebarLink
-          to="/training"
-          icon={<NotebookPen className="text-gray-600 dark:text-gray-400" />}
-          label="Training"
+          to="/projects"
+          icon={<Presentation className="text-gray-600 dark:text-gray-400" />}
+          label="Projects"
           isSidebarOpen={isSidebarOpen}
           onClick={handleLinkClick}
         />
