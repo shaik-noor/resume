@@ -6,7 +6,7 @@ const goToGithub = () => {
   window.open("https://noruj.com/contact", "_blank");
 };
 
-export default function Home() {
+export default function About() {
   return (
       <>
         <main className=" flex items-center justify-center overflow-auto">

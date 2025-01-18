@@ -170,7 +170,7 @@ function SidebarLinks({
         <SidebarLink
           to="/"
           icon={<Home className="text-gray-600 dark:text-gray-400" />}
-          label="Home"
+          label="About"
           isSidebarOpen={isSidebarOpen}
           onClick={handleLinkClick}
         />
