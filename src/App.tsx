@@ -14,7 +14,7 @@ import Education from "./pages/Education";
 import Contact from "./pages/Contact";
 
 // Lazy load pages
-const Home = React.lazy(() => import("./pages/Home"));
+const Home = React.lazy(() => import("./pages/About.tsx"));
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(() => {
