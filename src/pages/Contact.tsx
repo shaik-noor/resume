@@ -3,7 +3,7 @@ const Contact = () => {
         window.open("mailto:s.noorink@gmail.com", "_blank");
     }
     return (
-        <main className="flex items-center justify-center min-h-screen ">
+        <main className="flex items-center justify-center">
             <div className="container mx-auto px-6 py-12">
                 {/* Contact Section */}
                 <section className="space-y-12">
