@@ -33,7 +33,7 @@ const NotFound: React.FC = () => {
                 <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
                     {/* About Section */}
                     <div className="text-center md:text-left">
-                        <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+                    <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white lg:text-4xl">
                             404 - Page Not Found
                         </h1>
                         <hr className="mb-2 mt-1 h-0.5 bg-primary border-none"/>

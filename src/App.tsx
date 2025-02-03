@@ -13,6 +13,7 @@ import Projects from "./pages/Projects.tsx";
 import Education from "./pages/Education";
 import Contact from "./pages/Contact";
 import JourneyBlog from "@/pages/JourneyBlog .tsx";
+import SimpleLoading from "@/components/SimpleLoading.tsx";
 
 // Lazy load pages
 const Home = React.lazy(() => import("./pages/About.tsx"));
@@ -61,7 +62,7 @@ function App() {
             <main className="flex items-center justify-center p-4 mt-[64px] min-h-[calc(100vh-64px)]">
               {/* Ensure content starts below the TopHeader */}
               <div className="w-full max-w-4xl rounded-lg shadow-lg">
-                <Suspense fallback={<div>Loading...</div>}>
+                <Suspense fallback={<SimpleLoading/>}>
                   <Routes>
                     <Route path="*" element={<NotFound />} />
                     <Route path="/" element={<Home />} />
