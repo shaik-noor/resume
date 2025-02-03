@@ -47,7 +47,7 @@ const WorkExperience = () => {
             {experiences.map((experience, index) => (
               <div key={index} className="relative">
                 {/* Timeline Marker */}
-                <div className="absolute -left-7 md:-left-8 top-4 h-4 w-4 bg-primary rounded-full border-4 border-white dark:border-gray-900 z-10" />
+                <div className="absolute -left-7 md:-left-8 top-4 h-4 w-4 bg-primary rounded-full border-4 border-white dark:border-gray-900 " />
 
                 {/* Content Card */}
                 <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 p-6">
