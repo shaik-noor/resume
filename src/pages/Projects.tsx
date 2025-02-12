@@ -10,6 +10,12 @@ const Projects = () => {
         "Developed a personal portfolio website using Flask and Tailwind CSS to showcase my projects and skills.",
       link: "https://portfolio.noruj.com",
     },
+    {
+      title: "Noruj.com",
+      description:
+          "Build an educational and collaborative platform focused on technology, programming, and data engineering.",
+      link: "https://noruj.com",
+    },
   ];
 
   return (

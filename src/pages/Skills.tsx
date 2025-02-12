@@ -1,7 +1,7 @@
 const Skills = () => {
   const skills = [
     {
-      name: "PowerCenter",
+      name: "PowerCenter & IICS",
       image: "https://companieslogo.com/img/orig/INFA-c4767c1c.png",
     },
     {

@@ -1,9 +1,11 @@
+import UnixEssentialImage from "@/assets/Unix-Essential-Training.png"
+import { Badge } from "@/components/ui/badge"
+
 const Certificates = () => {
   const certificates = [
     {
       title: "Unix Essential Training",
-      image:
-        "https://media.licdn.com/dms/image/v2/C561FAQFu1lxImX03fw/feedshare-document-cover-images_1280/feedshare-document-cover-images_1280/0/1659644691818?e=1739232000&v=beta&t=7pUWHulQT3K9fy-Xf-jMB9ZriGq7Z_T0C8rMCrHdGx4",
+      image:UnixEssentialImage,
       link: "https://www.linkedin.com/learning/certificates/cf4c365df01bca16733b77fdf2bc677a06d979acb3788a3f99a085e5a6741294?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BPmDhBcr9RJKUgW0zwGu1Ng%3D%3D",
       description:
         "Learned the basics of working in Linux OS and using it for daily activities.",
@@ -33,11 +35,15 @@ const Certificates = () => {
     <main className="flex items-center justify-center py-10">
       <div className="container mx-auto px-6 py-8">
         {/* Header Section */}
+
         <section className="space-y-8 mb-10 text-center md:text-left">
-          <h1 className="text-3xl font-bold tracking-tight lg:text-4xl">
-            Certificates
-          </h1>
-          <hr className="mb-4 mt-2 h-0.5 bg-primary border-none" />
+          <div className="flex items-center justify-between">
+            <h1 className="text-3xl font-bold tracking-tight lg:text-4xl">
+              Certificates
+            </h1>
+            <Badge className="justify-end" variant="destructive">Still updating this page</Badge>
+          </div>
+          <hr className="mb-4 mt-2 h-0.5 bg-primary border-none"/>
           <p className="text-base leading-relaxed text-gray-700 dark:text-gray-300">
             A showcase of my professional certifications, along with the skills
             and knowledge gained.
