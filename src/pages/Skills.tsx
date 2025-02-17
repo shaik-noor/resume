@@ -5,15 +5,19 @@ const Skills = () => {
       image: "https://companieslogo.com/img/orig/INFA-c4767c1c.png",
     },
     {
-      name: "Spark",
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/f/f3/Apache_Spark_logo.svg",
+      name:"Apache Nifi",
+      image:"https://cms.acte.ltd/storage/app/uploads/public/665/2e2/814/6652e28144ba5040936680.png",
     },
-    {
-      name: "Hadoop",
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Hadoop_logo_new.svg/1280px-Hadoop_logo_new.svg.png",
-    },
+    // {
+    //   name: "Spark",
+    //   image:
+    //     "https://upload.wikimedia.org/wikipedia/commons/f/f3/Apache_Spark_logo.svg",
+    // },
+    // {
+    //   name: "Hadoop",
+    //   image:
+    //     "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Hadoop_logo_new.svg/1280px-Hadoop_logo_new.svg.png",
+    // },
     {
       name: "Airflow",
       image:
