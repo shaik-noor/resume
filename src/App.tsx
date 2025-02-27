@@ -59,7 +59,7 @@ function App() {
             />
 
             {/* Main Content Area */}
-            <main className="flex items-center justify-center p-4 mt-[64px] min-h-[calc(100vh-64px)]">
+            <main className="antialiased md:subpixel-antialiased flex items-center justify-center p-4 mt-[64px] min-h-[calc(100vh-64px)]">
               {/* Ensure content starts below the TopHeader */}
               <div className="w-full max-w-4xl rounded-lg shadow-lg">
                 <Suspense fallback={<SimpleLoading/>}>
