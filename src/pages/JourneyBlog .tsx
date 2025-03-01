@@ -85,7 +85,6 @@ const blogs: Blog[] = [
   },
 ];
 
-
 const certificateBlogs: Blog[] = [
   {
     title: "Informatica Platform Administration Fundamentals",
