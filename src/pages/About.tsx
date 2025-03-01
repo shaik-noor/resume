@@ -1,20 +1,37 @@
 import { Button } from "@/components/ui/button";
-import {Contact, DownloadIcon, GithubIcon, Linkedin, User} from "lucide-react";
+import {
+  Contact,
+  DownloadIcon,
+  GithubIcon,
+  Linkedin,
+  User,
+} from "lucide-react";
 import { Link } from "react-router-dom";
-
-const goToGithub = () => {
-  window.open("https://github.com/shaik-noor", "_blank");
-};
-
-const goToLinkedin=() =>{
-  window.open("https://www.linkedin.com/in/shaik-noor/", "_blank");
-}
-
-const DownloadResume=() =>{
-  window.open("https://github.com/shaik-noor/resume/tree/main/src/assets/Noor-Resume.pdf", "_blank");
-}
+import { useMemo } from "react";
+import { experiences, calculateTotalExperience } from "@/utils/experience";
 
 export default function About() {
+  // Calculate total experience using the shared util.
+  const totalExperience = useMemo(
+    () => calculateTotalExperience(experiences),
+    []
+  );
+
+  const goToGithub = () => {
+    window.open("https://github.com/shaik-noor", "_blank");
+  };
+
+  const goToLinkedin = () => {
+    window.open("https://www.linkedin.com/in/shaik-noor/", "_blank");
+  };
+
+  const DownloadResume = () => {
+    window.open(
+      "https://github.com/shaik-noor/resume/tree/main/src/assets/Noor-Resume.pdf",
+      "_blank"
+    );
+  };
+
   return (
     <main className="flex items-center justify-center py-10">
       <div className="container mx-auto px-6 py-8">
@@ -33,10 +50,11 @@ export default function About() {
               Hi, I&apos;m{" "}
               <span className="font-semibold">Shaik Noor Mohammad</span>, a
               software engineer with over{" "}
-              <span className="font-semibold">5 years of experience</span>. I
-              currently work at{" "}
-              <span className="text-orange-500 font-bold">Informatica</span>, focusing on
-              the PowerCenter product. My expertise includes{" "}
+              <span className="font-semibold">{totalExperience}</span> of
+              experience. I currently work at{" "}
+              <span className="text-orange-500 font-bold">Informatica</span>,
+              focusing on the PowerCenter and IICS products. My expertise
+              includes{" "}
               <span className="font-semibold">
                 technical assistance, troubleshooting, and software issue
                 resolution
@@ -65,14 +83,18 @@ export default function About() {
                 Github
               </Button>
               <Button
-                  variant="outline"
-                  onClick={goToLinkedin}
-                  className="flex items-center gap-2"
+                variant="outline"
+                onClick={goToLinkedin}
+                className="flex items-center gap-2"
               >
                 <Linkedin />
                 Linkedin
               </Button>
-              <Button variant="outline" className="flex items-center gap-2" onClick={DownloadResume}>
+              <Button
+                variant="outline"
+                onClick={DownloadResume}
+                className="flex items-center gap-2"
+              >
                 <DownloadIcon />
                 Download Resume
               </Button>
