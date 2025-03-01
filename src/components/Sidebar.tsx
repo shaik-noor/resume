@@ -1,15 +1,17 @@
 import React from "react";
-import {Link, useLocation} from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
   BriefcaseBusinessIcon,
   ChevronsLeft,
   ChevronsRight,
   GraduationCap,
   Home,
-  Mail, Presentation,
+  Mail,
+  Presentation,
   ShieldCheckIcon,
   UserCheck,
   Route,
+  FileUser,
 } from "lucide-react";
 
 import {
@@ -96,12 +98,12 @@ export default function Sidebar({
 }
 
 function SidebarLink({
-                       to,
-                       icon,
-                       label,
-                       isSidebarOpen,
-                       onClick,
-                     }: {
+  to,
+  icon,
+  label,
+  isSidebarOpen,
+  onClick,
+}: {
   to: string;
   icon: React.ReactNode;
   label: string;
@@ -112,45 +114,45 @@ function SidebarLink({
   const isActive = location.pathname === to;
 
   return (
-      <Tooltip>
-        <TooltipTrigger asChild>
-          <Link
-              to={to}
-              className={`flex items-center px-4 py-3 ${
-                  isActive
-                      ? "bg-secondary "
-                      : "hover:bg-secondary text-gray-600 dark:text-gray-400"
-              }`}
-              onClick={onClick}
-              style={{
-                height: "48px", // Fixed height for each item
-              }}
+    <Tooltip>
+      <TooltipTrigger asChild>
+        <Link
+          to={to}
+          className={`flex items-center px-4 py-3 ${
+            isActive
+              ? "bg-secondary "
+              : "hover:bg-secondary text-gray-600 dark:text-gray-400"
+          }`}
+          onClick={onClick}
+          style={{
+            height: "48px", // Fixed height for each item
+          }}
+        >
+          {/* Icon Container with Fixed Width */}
+          <div
+            className="flex justify-center items-center"
+            style={{ width: "40px" }} // Fixed width for icons
           >
-            {/* Icon Container with Fixed Width */}
-            <div
-                className="flex justify-center items-center"
-                style={{ width: "40px" }} // Fixed width for icons
-            >
-              {icon}
-            </div>
+            {icon}
+          </div>
 
-            {/* Label */}
-            {isSidebarOpen && (
-                <span
-                    className="ml-3 truncate"
-                    style={{ maxWidth: "160px" }} // Prevent labels from overflowing
-                >
+          {/* Label */}
+          {isSidebarOpen && (
+            <span
+              className="ml-3 truncate"
+              style={{ maxWidth: "160px" }} // Prevent labels from overflowing
+            >
               {label}
             </span>
-            )}
-          </Link>
-        </TooltipTrigger>
-        {!isSidebarOpen && (
-            <TooltipContent side="right" align="center">
-              <p>{label}</p>
-            </TooltipContent>
-        )}
-      </Tooltip>
+          )}
+        </Link>
+      </TooltipTrigger>
+      {!isSidebarOpen && (
+        <TooltipContent side="right" align="center">
+          <p>{label}</p>
+        </TooltipContent>
+      )}
+    </Tooltip>
   );
 }
 
@@ -172,6 +174,13 @@ function SidebarLinks({
           to="/"
           icon={<Home className="text-gray-600 dark:text-gray-400" />}
           label="About"
+          isSidebarOpen={isSidebarOpen}
+          onClick={handleLinkClick}
+        />
+        <SidebarLink
+          to="/resume"
+          icon={<FileUser className="text-gray-600 dark:text-gray-400" />}
+          label="Resume"
           isSidebarOpen={isSidebarOpen}
           onClick={handleLinkClick}
         />
@@ -221,12 +230,13 @@ function SidebarLinks({
           isSidebarOpen={isSidebarOpen}
           onClick={handleLinkClick}
         />
+
         <SidebarLink
-            to="/journey-blog"
-            icon={<Route className="text-gray-600 dark:text-gray-400" />}
-            label="Journey Blog"
-            isSidebarOpen={isSidebarOpen}
-            onClick={handleLinkClick}
+          to="/journey-blog"
+          icon={<Route className="text-gray-600 dark:text-gray-400" />}
+          label="Journey Blog"
+          isSidebarOpen={isSidebarOpen}
+          onClick={handleLinkClick}
         />
       </nav>
     </TooltipProvider>

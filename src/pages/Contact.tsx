@@ -42,12 +42,7 @@ const Contact = () => {
 
           {/* Send Message Button */}
           <div className="flex justify-center md:justify-start">
-            <Button
-              onClick={goToContact}
-              
-            >
-              Send Message
-            </Button>
+            <Button onClick={goToContact}>Send Message</Button>
           </div>
         </section>
       </div>

@@ -13,7 +13,7 @@ const Projects = () => {
     {
       title: "Noruj.com",
       description:
-          "Build an educational and collaborative platform focused on technology, programming, and data engineering.",
+        "Build an educational and collaborative platform focused on technology, programming, and data engineering.",
       link: "https://noruj.com",
     },
   ];

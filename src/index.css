@@ -73,3 +73,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+.soft-btn {
+  @apply bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-lg border border-transparent py-2 px-4 transition duration-200 ease-in-out;
+}
+.soft-btn:hover {
+  @apply bg-gray-200 dark:bg-gray-700;
+}

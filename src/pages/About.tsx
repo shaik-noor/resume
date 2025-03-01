@@ -1,11 +1,5 @@
 import { Button } from "@/components/ui/button";
-import {
-  Contact,
-  DownloadIcon,
-  GithubIcon,
-  Linkedin,
-  User,
-} from "lucide-react";
+import { Contact, DownloadIcon, GithubIcon, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useMemo } from "react";
 import { experiences, calculateTotalExperience } from "@/utils/experience";
@@ -36,7 +30,7 @@ export default function About() {
     <main className="flex items-center justify-center py-10">
       <div className="container mx-auto px-6 py-8">
         {/* Header Section */}
-        <section className="space-y-8 mb-10 text-center md:text-left">
+        <section className="space-y-8 mb-10 text-left">
           <h1 className="text-3xl font-bold tracking-tight lg:text-4xl">
             About
           </h1>
@@ -67,40 +61,39 @@ export default function About() {
             </p>
 
             {/* Buttons */}
-            <div className="flex flex-wrap gap-4">
-              <Button variant="outline" className="flex items-center gap-2">
-                <User />
-                <Link target="_blank" to={"https://portfolio.noruj.com"}>
-                  Portfolio
-                </Link>
-              </Button>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Button
                 variant="outline"
                 onClick={goToGithub}
                 className="flex items-center gap-2"
               >
-                <GithubIcon />
-                Github
+                <GithubIcon className="h-4 w-4" />
+                <span className="whitespace-normal break-words">Github</span>
               </Button>
               <Button
                 variant="outline"
                 onClick={goToLinkedin}
                 className="flex items-center gap-2"
               >
-                <Linkedin />
-                Linkedin
+                <Linkedin className="h-4 w-4" />
+                <span className="whitespace-normal break-words">Linkedin</span>
+              </Button>
+
+              <Button variant="outline" className="flex items-center gap-2">
+                <Contact className="h-4 w-4" />
+                <Link to="/resume" className="whitespace-normal break-words">
+                  Read Resume
+                </Link>
               </Button>
               <Button
                 variant="outline"
                 onClick={DownloadResume}
                 className="flex items-center gap-2"
               >
-                <DownloadIcon />
-                Download Resume
-              </Button>
-              <Button variant="outline" className="flex items-center gap-2">
-                <Contact />
-                <Link to={"/contact"}>Contact</Link>
+                <DownloadIcon className="h-4 w-4" />
+                <span className="whitespace-normal break-words">
+                  Download Resume
+                </span>
               </Button>
             </div>
           </div>
