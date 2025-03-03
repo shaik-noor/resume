@@ -3,6 +3,7 @@ import { Contact, DownloadIcon, GithubIcon, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useMemo } from "react";
 import { experiences, calculateTotalExperience } from "@/utils/experience";
+import resume from "@/assets/Noor_Resume.pdf"
 
 export default function About() {
   // Calculate total experience using the shared util.
@@ -19,12 +20,7 @@ export default function About() {
     window.open("https://www.linkedin.com/in/shaik-noor/", "_blank");
   };
 
-  const DownloadResume = () => {
-    window.open(
-      "https://github.com/shaik-noor/resume/tree/main/src/assets/Noor-Resume.pdf",
-      "_blank"
-    );
-  };
+
 
   return (
     <main className="flex items-center justify-center py-10">
@@ -85,15 +81,13 @@ export default function About() {
                   Read Resume
                 </Link>
               </Button>
-              <Button
-                variant="outline"
-                onClick={DownloadResume}
-                className="flex items-center gap-2"
-              >
-                <DownloadIcon className="h-4 w-4" />
-                <span className="whitespace-normal break-words">
-                  Download Resume
-                </span>
+              <Button variant="outline" className="flex items-center gap-2">
+                <a href={resume} download="Noor_Resume.pdf" className="flex items-center gap-2">
+                  <DownloadIcon className="h-4 w-4" />
+                  <span className="whitespace-normal break-words">
+      Download Resume
+    </span>
+                </a>
               </Button>
             </div>
           </div>
