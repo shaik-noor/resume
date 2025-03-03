@@ -61,27 +61,35 @@ const blogs: Blog[] = [
     date: "Dec 2024",
     description:
       "I have completed the Introduction to Data Engineering course on Coursera. I have learned the basics of data engineering, including data modeling, data warehousing, and ETL processes. I have also learned how to work with databases, data pipelines, and big data technologies.",
-    source: "Coursera",
+    source: "By IBM on Coursera",
   },
   {
     title: "Python for Data Science, AI & Development: Coursera",
     date: "Jan 2025",
     description:
       "I have completed the Python for Data Science, AI & Development course on Coursera. I have learned how to use Python for data analysis, machine learning, and web development. I have also learned how to work with libraries like NumPy, Pandas.",
-    source: "Coursera",
+    source: "By IBM on Coursera",
   },
   {
     title: "Python Project for Data Engineering: Coursera",
     date: "Jan 2025",
     description:
       "I have completed the Python Project for Data Engineering course on Coursera. I have learned how to build a data pipeline using Python, including data extraction, transformation, and loading. I have also learned how to work with databases, APIs and webscraping.",
-    source: "Coursera",
+    source: "By IBM on Coursera",
   },
   {
     title: "Introduction to Relational Database (RDBMS): Coursera",
-    date: "present",
-    description: "Still learning",
-    source: "Coursera",
+    date: "Feb 2025",
+    description:
+      "I have completed the Introduction to Relational Database (RDBMS) course on Coursera. I have learned the basics of relational databases, including SQL syntax, data modeling, and database design. I have also learned how to create tables, insert data, and query databases using SQL.",
+    source: "By IBM on Coursera",
+  },
+  {
+    title: "Intro to AI Engineering",
+    date: "March 2025",
+    description:
+      "learning",
+    source: "By Scrimba on Coursera",
   },
 ];
 
@@ -156,10 +164,12 @@ const getTagClasses = (source?: string): string => {
   switch (source) {
     case "Informatica":
       return "bg-orange-500 text-white";
-    case "Coursera":
+    case "By IBM on Coursera":
       return "bg-blue-500 text-white";
     case "LinkedIn":
       return "bg-sky-400 text-white";
+      case "By Scrimba on Coursera":
+      return "bg-violet-400 text-white";
     default:
       return "bg-gray-500 text-white";
   }
