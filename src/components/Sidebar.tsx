@@ -42,23 +42,20 @@ export default function Sidebar({
     <>
       {/* Mobile Sidebar */}
       <aside
-        className={`fixed inset-y-0 left-0 z-50 transform dark:bg-gray-900 bg-white  shadow-lg transition-transform duration-300 ${
+        className={`fixed inset-y-0 left-0 z-50 transform dark:bg-gray-900 bg-white shadow-lg transition-transform duration-300 ${
           isMobileSidebarOpen ? "translate-x-0" : "-translate-x-full"
         } md:hidden`}
       >
         <div className="flex h-full flex-col">
           <div className="flex items-center justify-between border-b border-gray-200 px-4 py-2">
-            <h1 className="text-lg font-bold leading-none text-gray-400">
-              Navigation
-            </h1>
+            <h1 className="text-lg font-bold text-gray-400">Navigation</h1>
             <button
               onClick={() => setIsMobileSidebarOpen(false)}
               className="flex items-center justify-center p-2 text-gray-400"
             >
-              <ChevronsLeft className="h-5 w-5" />
+              <ChevronsLeft />
             </button>
           </div>
-
           <SidebarLinks
             isSidebarOpen={true}
             onClose={() => setIsMobileSidebarOpen(false)}
@@ -72,25 +69,21 @@ export default function Sidebar({
           isSidebarOpen ? "w-64" : "w-16"
         }`}
       >
-        <div className="flex h-full flex-col">
+        <div className="relative h-full">
+          {/* Sidebar links */}
           <SidebarLinks isSidebarOpen={isSidebarOpen} />
-          <div
-            className={`flex items-center justify-${
-              isSidebarOpen ? "between" : "center"
-            } border-t px-4 py-4`}
+
+          {/* Collapse Toggle positioned at the center of the right border */}
+          <button
+            onClick={handleToggleSidebar}
+            className="absolute right-[-12px] top-1/2 transform -translate-y-1/2 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-full p-2 shadow hover:shadow-md transition"
           >
-            {isSidebarOpen && (
-              <span className="font-medium text-gray-600 dark:text-gray-400">
-                Collapse
-              </span>
+            {isSidebarOpen ? (
+              <ChevronsLeft size={16} />
+            ) : (
+              <ChevronsRight size={16} />
             )}
-            <button
-              onClick={handleToggleSidebar}
-              className="p-2 text-gray-600 dark:text-gray-400"
-            >
-              {isSidebarOpen ? <ChevronsLeft /> : <ChevronsRight />}
-            </button>
-          </div>
+          </button>
         </div>
       </aside>
     </>
@@ -118,25 +111,20 @@ function SidebarLink({
       <TooltipTrigger asChild>
         <Link
           to={to}
+          onClick={onClick}
           className={`flex items-center px-4 py-3 ${
             isActive
-              ? "bg-secondary "
+              ? "bg-secondary"
               : "hover:bg-secondary text-gray-600 dark:text-gray-400"
           }`}
-          onClick={onClick}
-          style={{
-            height: "48px", // Fixed height for each item
-          }}
+          style={{ height: "48px" }} // Fixed height for each item
         >
-          {/* Icon Container with Fixed Width */}
           <div
             className="flex justify-center items-center"
             style={{ width: "40px" }} // Fixed width for icons
           >
             {icon}
           </div>
-
-          {/* Label */}
           {isSidebarOpen && (
             <span
               className="ml-3 truncate"
@@ -230,7 +218,6 @@ function SidebarLinks({
           isSidebarOpen={isSidebarOpen}
           onClick={handleLinkClick}
         />
-
         <SidebarLink
           to="/journey-blog"
           icon={<Route className="text-gray-600 dark:text-gray-400" />}
