@@ -15,9 +15,11 @@ import {
   SidebarMenuItem,
   SidebarMenuButton,
   SidebarSeparator,
+  SidebarRail,
+  useSidebar,
 } from "@/components/ui/sidebar"
-import { Button } from "@/components/ui/button"
-import { Separator } from "@/components/ui/separator"
+import { Avatar, AvatarFallback } from "@/components/ui/avatar"
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
 import { Badge } from "@/components/ui/badge"
 import {
   UserIcon,
@@ -28,8 +30,6 @@ import {
   LayersIcon,
   GraduationCapIcon,
   MailIcon,
-  RouteIcon,
-  BookOpenIcon,
 } from "lucide-react"
 
 type NavItem = {
@@ -47,44 +47,61 @@ const navItems: NavItem[] = [
   { title: "Projects", href: "/projects", icon: LayersIcon },
   { title: "Educations", href: "/educations", icon: GraduationCapIcon },
   { title: "Contact", href: "/contact", icon: MailIcon },
-  { title: "Journey", href: "/journey", icon: RouteIcon },
-  { title: "Blog", href: "/blog", icon: BookOpenIcon },
 ]
 
 export function AppSidebar() {
   const pathname = usePathname()
+  const { state } = useSidebar()
 
   return (
-    <Sidebar collapsible="offcanvas" variant="inset">
-      <SidebarHeader>
-        <div className="flex items-center gap-2 px-2 py-1.5">
-          <div className="size-6 rounded-md bg-primary text-primary-foreground grid place-items-center font-semibold">
-            SN
+    <Sidebar collapsible="icon" variant="sidebar">
+      <SidebarRail />
+      <SidebarHeader className="border-b">
+        {state === "collapsed" ? (
+          // Compact brand in collapsed mode to avoid a visually empty header
+          <div className="grid h-14 place-items-center">
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Link href="/about" aria-label="About" className="grid place-items-center">
+                  <Avatar className="size-7 ring-1 ring-sidebar-border">
+                    <AvatarFallback className="bg-primary text-primary-foreground text-[10px] font-bold">SNM</AvatarFallback>
+                  </Avatar>
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent side="right" align="center">
+                Shaik Noor Mohammad — Software Engineer
+              </TooltipContent>
+            </Tooltip>
           </div>
-          <div className="flex flex-col">
-            <span className="text-sm font-semibold">Shaik Noor Mohammad</span>
-            <span className="text-xs text-muted-foreground">Software Engineer</span>
+        ) : (
+          <div className="flex h-14 items-center gap-3 px-3">
+            <div className="grid size-7 place-items-center rounded-md bg-primary text-primary-foreground">
+              <UserIcon className="size-5" />
+            </div>
+            <div className="flex min-w-0 flex-col">
+              <span className="truncate text-sm font-semibold leading-tight tracking-tight">Shaik Noor Mohammad</span>
+              <span className="truncate text-xs text-muted-foreground">Software Engineer</span>
+            </div>
           </div>
-        </div>
-        <Separator className="mx-2" />
+        )}
       </SidebarHeader>
 
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Navigation</SidebarGroupLabel>
+          {state !== "collapsed" && <SidebarGroupLabel>Navigation</SidebarGroupLabel>}
           <SidebarGroupContent>
-            <SidebarMenu>
+            <SidebarMenu className="gap-0.5">
               {navItems.map((item) => {
                 const Icon = item.icon
                 const isActive = pathname === item.href
                 return (
                   <SidebarMenuItem key={item.href}>
-                    <SidebarMenuButton
-                      asChild
-                      isActive={isActive}
-                      tooltip={item.title}
-                    >
-                      <Link href={item.href} className="flex items-center gap-2">
+                    <SidebarMenuButton asChild isActive={isActive} tooltip={item.title}>
+                      <Link
+                        href={item.href}
+                        aria-current={isActive ? "page" : undefined}
+                        className={`flex h-9 items-center gap-2 ${isActive ? "font-medium" : ""}`}
+                      >
                         <Icon className="size-4" />
                         <span className="truncate">{item.title}</span>
                       </Link>
@@ -98,13 +115,14 @@ export function AppSidebar() {
       </SidebarContent>
 
       <SidebarSeparator />
-
-      <SidebarFooter>
-        <div className="px-2 py-1.5 text-xs text-muted-foreground">
-          <p className="mb-1">PowerCenter • IICS • Troubleshooting</p>
-          <Badge variant="secondary" className="text-[10px]">Open to opportunities</Badge>
-        </div>
-      </SidebarFooter>
+      {state !== "collapsed" && (
+        <SidebarFooter>
+          <div className="px-3 py-2 text-xs text-muted-foreground">
+            <p className="mb-1">PowerCenter • IDMC • Troubleshooting</p>
+            <Badge variant="secondary" className="text-[10px]">Open to opportunities</Badge>
+          </div>
+        </SidebarFooter>
+      )}
     </Sidebar>
   )
 }

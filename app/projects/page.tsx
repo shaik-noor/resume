@@ -7,8 +7,8 @@ export default function ProjectsPage() {
     {
       name: "Data Integration Playbook",
       summary:
-        "Internal toolkit and documentation to streamline PowerCenter/IICS troubleshooting workflows.",
-      tags: ["IICS", "PowerCenter", "Support"],
+        "Internal toolkit and documentation to streamline PowerCenter/IDMC troubleshooting workflows.",
+      tags: ["IDMC", "PowerCenter", "Support"],
     },
     {
       name: "Customer Diagnostics Scripts",

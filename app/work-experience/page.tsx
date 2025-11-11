@@ -7,14 +7,39 @@ export default function WorkExperiencePage() {
     {
       company: "Informatica",
       title: "Software Engineer",
-      period: "2019 – Present",
+      period: "Aug 2023 – Present • 2 years 3 months",
+      logo: "/assets/informatica_logo.jpg",
       summary:
-        "Support engineer focusing on PowerCenter and IICS products, delivering technical assistance and issue resolution.",
+        "Providing expert-level technical assistance and troubleshooting for Informatica PowerCenter and IDMC products, ensuring optimal performance and customer satisfaction.",
       highlights: [
-        "Diagnosed and resolved complex product issues across customer environments",
-        "Collaborated with engineering and product teams to drive fixes and improvements",
-        "Created scalable troubleshooting guides and internal playbooks",
-        "Improved resolution time and customer satisfaction metrics",
+        "Collaborating with Product Specialist teams to analyze and resolve complex technical issues through detailed investigation of stack traces, logs, and system configurations.",
+        "Working closely with R&D teams to identify, document, and address product bugs and vulnerabilities, contributing to enhanced product stability and security.",
+        "Leading the implementation and testing of Emergency Bug Fix (EBF) releases, ensuring rapid deployment of critical fixes to maintain system reliability.",
+        "Developing and implementing efficient debugging strategies to minimize customer downtime and optimize issue resolution processes.",
+      ],
+    },
+    {
+      company: "Informatica",
+      title: "Technical Support Engineer",
+      period: "Jul 2020 – Jul 2023 • 3 years",
+      logo: "/assets/informatica_logo.jpg",
+      summary:
+        "Worked with the Data as a Service team to validate and verify postal addresses, emails, and phone numbers.",
+      highlights: [
+        "Assisted clients with technical issues, documentation, and case escalations.",
+        "Developed automation scripts to improve workflow efficiency.",
+      ],
+    },
+    {
+      company: "F1 Info Solutions & Services (Flipkart Subsidiary)",
+      title: "Senior Engineer",
+      period: "Oct 2018 – May 2019 • 7 months",
+      logo: "/assets/f1_info_solutions__services_private_limited_logo.jpg",
+      summary:
+        "Part of the refurbishing and servicing team, responsible for restoring and servicing electronic devices.",
+      highlights: [
+        "Led technical training sessions for new team members.",
+        "Optimized repair processes reducing turnaround time by 25%.",
       ],
     },
   ]
@@ -28,17 +53,47 @@ export default function WorkExperiencePage() {
 
       <div className="space-y-4">
         {roles.map((role) => (
-          <article key={role.company} className="rounded-lg border p-4">
-            <div className="flex flex-wrap items-center justify-between gap-2">
-              <h2 className="text-lg font-semibold">{role.title} · {role.company}</h2>
-              <span className="text-xs text-muted-foreground">{role.period}</span>
+          <article
+            key={`${role.company}-${role.title}`}
+            className="rounded-lg border p-4 transition hover:bg-accent/40"
+          >
+            <div className="flex gap-4">
+              <div className="shrink-0">
+                <img
+                  src={role.logo}
+                  alt={`${role.company} logo`}
+                  className="h-12 w-12 rounded object-contain border"
+                />
+              </div>
+              <div className="flex-1">
+                <h2 className="text-base md:text-lg font-semibold">
+                  {role.title} <span className="text-muted-foreground">· {role.company}</span>
+                </h2>
+                <div className="mt-1 text-xs text-muted-foreground flex items-center gap-2">
+                  <span>{role.period}</span>
+                </div>
+                <p className="mt-2 text-sm text-muted-foreground">{role.summary}</p>
+
+                {/* Highlights — show first 2 by default, rest under "Show more" */}
+                <ul className="mt-3 list-disc pl-5 space-y-1 text-sm">
+                  {role.highlights.slice(0, 2).map((h) => (
+                    <li key={h}>{h}</li>
+                  ))}
+                </ul>
+                {role.highlights.length > 2 && (
+                  <details className="mt-2">
+                    <summary className="text-xs cursor-pointer select-none text-primary hover:underline">
+                      Show more
+                    </summary>
+                    <ul className="mt-2 list-disc pl-5 space-y-1 text-sm">
+                      {role.highlights.slice(2).map((h) => (
+                        <li key={h}>{h}</li>
+                      ))}
+                    </ul>
+                  </details>
+                )}
+              </div>
             </div>
-            <p className="mt-2 text-sm text-muted-foreground">{role.summary}</p>
-            <ul className="mt-3 list-disc pl-5 space-y-1 text-sm">
-              {role.highlights.map((h) => (
-                <li key={h}>{h}</li>
-              ))}
-            </ul>
           </article>
         ))}
       </div>
