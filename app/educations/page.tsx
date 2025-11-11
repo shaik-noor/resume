@@ -5,10 +5,18 @@ export const metadata = {
 export default function EducationsPage() {
   const schools = [
     {
-      school: "Your University (placeholder)",
-      degree: "B.Tech / B.E. in Computer Science",
-      period: "YYYY – YYYY",
-      details: "Core subjects in CS, data structures, algorithms, databases, and systems.",
+      school: "Zero To Mastery Academy",
+      degree: "Computer Programming",
+      period: "2022",
+      details:
+        "Learned JavaScript, Python, full stack development, cloud computing, production application deployment, database management, version control, and more.",
+    },
+    {
+      school: "Sri Krishnadevaraya University",
+      degree: "Bachelor of Commerce (B.Com)",
+      period: "2014 – 2017",
+      details:
+        "Focused on accounting, finance, and business management principles. Developed strong analytical and problem-solving skills essential for business operations.",
     },
   ]
 

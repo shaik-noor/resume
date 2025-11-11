@@ -1,7 +1,5 @@
 import Link from "next/link"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Button } from "@/components/ui/button"
+import ContactForm from "@/components/contact-form"
 
 export const metadata = {
   title: "Contact — Shaik Noor",
@@ -20,21 +18,14 @@ export default function ContactPage() {
           <h2 className="text-sm font-semibold">Direct</h2>
           <ul className="mt-2 text-sm space-y-1">
             <li>
-              Email: <Link href="mailto:you@example.com" className="text-primary">you@example.com</Link>
+              Email: <Link href="mailto:s.noorink@gmail.com" className="text-primary">s.noorink@gmail.com</Link>
             </li>
             <li>
-              LinkedIn: <Link href="https://linkedin.com/in/your-profile" target="_blank" className="text-primary">/your-profile</Link>
+              LinkedIn: <Link href="https://www.linkedin.com/in/shaik-noor/" target="_blank" className="text-primary">/shaik-noor</Link>
             </li>
           </ul>
         </div>
-        <form className="rounded-lg border p-4 space-y-3">
-          <h2 className="text-sm font-semibold">Message</h2>
-          <Input placeholder="Your name" />
-          <Input type="email" placeholder="Your email" />
-          <Textarea placeholder="Your message" rows={5} />
-          <Button type="button" variant="default">Send (placeholder)</Button>
-          <p className="text-xs text-muted-foreground">Note: Hook up handler or service to submit.</p>
-        </form>
+        <ContactForm />
       </div>
     </section>
   )
