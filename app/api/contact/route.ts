@@ -9,7 +9,8 @@ const BodySchema = z.object({
 })
 
 const resendApiKey = process.env.RESEND_API_KEY
-const toEmail = process.env.CONTACT_TO_EMAIL || "s.noorink@gmail.com"
+const toEmail = process.env.CONTACT_TO_EMAIL || "missing contact email"
+const fromEmail = process.env.CONTACT_FROM_EMAIL || "missing from email"
 
 export async function POST(req: Request) {
   try {
@@ -36,7 +37,7 @@ export async function POST(req: Request) {
     const text = `From: ${name} <${email}>\n\n${message}`
 
     const { data, error } = await resend.emails.send({
-      from: "Shaik Noor <onboarding@resend.dev>",
+      from: fromEmail,
       to: toEmail,
       subject,
       text,

@@ -56,6 +56,10 @@ RESEND_API_KEY=your_resend_api_key_here
 # Optional: destination email address for contact messages
 # Defaults to s.nootink@gmail.com if not set
 CONTACT_TO_EMAIL=your_destination_email@example.com
+
+# Sender address used for Resend emails (must belong to a verified domain)
+# Example after verifying noruj.com: CONTACT_FROM_EMAIL="Shaik Noor <contact@noruj.com>"
+CONTACT_FROM_EMAIL="Shaik Noor <onboarding@resend.dev>"
 ```
 
 3. Run the dev server:
@@ -65,3 +69,10 @@ npm run dev
 ```
 
 The contact API route is available at `POST /api/contact` and expects JSON `{ name, email, message }`.
+
+### Domain verification (required to email other recipients)
+- In Resend dashboard, add and verify your domain (e.g., `noruj.com`).
+- Add the DNS records shown by Resend (DKIM/SPF) at your DNS provider.
+- Wait for DNS propagation, then click Verify in Resend.
+- Update `CONTACT_FROM_EMAIL` to an address on your verified domain (e.g., `contact@noruj.com`).
+- For local testing before verification, set `CONTACT_TO_EMAIL` to your Resend account email (e.g., `mail.noru.in@gmail.com`), since Resend restricts unverified sends to your own address.
