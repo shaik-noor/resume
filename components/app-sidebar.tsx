@@ -27,7 +27,6 @@ import {
   BriefcaseIcon,
   WrenchIcon,
   AwardIcon,
-  LayersIcon,
   GraduationCapIcon,
   MailIcon,
 } from "lucide-react"
@@ -44,7 +43,6 @@ const navItems: NavItem[] = [
   { title: "Work Experience", href: "/work-experience", icon: BriefcaseIcon },
   { title: "Skills", href: "/skills", icon: WrenchIcon },
   { title: "Certificates", href: "/certificates", icon: AwardIcon },
-  { title: "Projects", href: "/projects", icon: LayersIcon },
   { title: "Educations", href: "/educations", icon: GraduationCapIcon },
   { title: "Contact", href: "/contact", icon: MailIcon },
 ]
