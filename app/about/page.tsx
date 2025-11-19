@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button";
 import SocialActions from "@/components/social-actions";
 
 export const metadata = {
-	title: "About — Shaik Noor",
+	title: "About - Shaik Noor",
 	description: "About Shaik Noor Mohammad",
 };
 
@@ -119,7 +119,7 @@ export default function AboutPage() {
 				<Card>
 					<CardHeader className="border-b">
 						<CardTitle>Current Role</CardTitle>
-						<CardDescription>Informatica — Support Engineering</CardDescription>
+						<CardDescription>Informatica - Support Engineering</CardDescription>
 					</CardHeader>
 					<CardContent>
 						<p className="text-sm text-muted-foreground">

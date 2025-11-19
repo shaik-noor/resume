@@ -22,7 +22,7 @@ export default function ResumePage() {
 				<object
 					data="/resume.pdf"
 					type="application/pdf"
-					className="w-full h-[70vh]"
+					className="w-full h-[80vh]"
 				>
 					<div className="p-6 space-y-2">
 						<p className="text-sm text-muted-foreground">

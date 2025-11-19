@@ -107,7 +107,7 @@ export default function ContactForm() {
 			</div>
 
 			<p className="text-xs text-muted-foreground">
-				Your message will be delivered to the site owner.
+				Your message will be delivered to <b>Shaik Noor</b>.
 			</p>
 		</form>
 	);
