@@ -1,5 +1,6 @@
 export const metadata = {
-	title: "Work Experience — Shaik Noor",
+	title: "Work Experience - Shaik Noor",
+	alternates: { canonical: "/work-experience" },
 };
 
 import Image from "next/image";
@@ -13,11 +14,86 @@ export default function WorkExperiencePage() {
 			summary:
 				"Provide L2/L3 support for PowerCenter and IDMC across performance, connectivity, configuration, and upgrades.",
 			highlights: [
-				"Provide L2/L3 technical support for Informatica PowerCenter and IDMC, troubleshooting complex customer issues across performance, connectivity, configuration, and upgrade scenarios.",
-				"Analyze stack traces, logs, and system configurations to identify root causes and drive permanent fixes in collaboration with Product Specialists and R&D teams.",
-				"Lead the implementation and validation of Emergency Bug Fix (EBF) releases, ensuring critical patches are tested, documented, and rolled out with minimal customer impact.",
-				"Develop and follow repeatable debugging playbooks to reduce mean time to resolution (MTTR) and improve case handling quality.",
-				"Currently upskilling on IDMC Administration Fundamentals and PowerCenter to Informatica Cloud migration through Informatica internal training to support customers on their cloud-migration journey.",
+				{
+					id: "se-1",
+					content: (
+						<>
+							Provide <strong className="font-semibold">L2/L3</strong> technical
+							support for Informatica{" "}
+							<strong className="font-semibold">PowerCenter</strong> and{" "}
+							<strong className="font-semibold">IDMC</strong>, troubleshooting
+							complex customer issues across{" "}
+							<strong className="font-semibold">performance</strong>,{" "}
+							<strong className="font-semibold">connectivity</strong>,{" "}
+							<strong className="font-semibold">configuration</strong>, and{" "}
+							<strong className="font-semibold">upgrade</strong> scenarios.
+						</>
+					),
+				},
+				{
+					id: "se-2",
+					content: (
+						<>
+							Analyze <strong className="font-semibold">stack traces</strong>,{" "}
+							<strong className="font-semibold">logs</strong>, and system
+							configurations to identify{" "}
+							<strong className="font-semibold">root causes</strong> and drive{" "}
+							<strong className="font-semibold">permanent fixes</strong> in
+							collaboration with{" "}
+							<strong className="font-semibold">Product Specialists</strong> and{" "}
+							<strong className="font-semibold">R&amp;D</strong> teams.
+						</>
+					),
+				},
+				{
+					id: "se-3",
+					content: (
+						<>
+							Lead the implementation and validation of{" "}
+							<strong className="font-semibold">Emergency Bug Fix (EBF)</strong>{" "}
+							releases, ensuring{" "}
+							<strong className="font-semibold">critical patches</strong> are{" "}
+							<strong className="font-semibold">tested</strong>,{" "}
+							<strong className="font-semibold">documented</strong>, and{" "}
+							<strong className="font-semibold">rolled out</strong> with{" "}
+							<strong className="font-semibold">minimal customer impact</strong>
+							.
+						</>
+					),
+				},
+				{
+					id: "se-4",
+					content: (
+						<>
+							Develop and follow repeatable{" "}
+							<strong className="font-semibold">debugging playbooks</strong> to
+							reduce{" "}
+							<strong className="font-semibold">
+								mean time to resolution (MTTR)
+							</strong>{" "}
+							and improve{" "}
+							<strong className="font-semibold">case handling quality</strong>.
+						</>
+					),
+				},
+				{
+					id: "se-5",
+					content: (
+						<>
+							Currently upskilling on{" "}
+							<strong className="font-semibold">
+								IDMC Administration Fundamentals
+							</strong>{" "}
+							and{" "}
+							<strong className="font-semibold">
+								PowerCenter to Informatica Cloud migration
+							</strong>{" "}
+							through Informatica{" "}
+							<strong className="font-semibold">internal training</strong> to
+							support customers on their cloud-migration journey.
+						</>
+					),
+				},
 			],
 		},
 		{
@@ -27,10 +103,67 @@ export default function WorkExperiencePage() {
 			logo: "/assets/informatica_logo.jpg",
 			summary: "Supported the Data as a Service team at scale.",
 			highlights: [
-				"Supported the Data as a Service (DaaS) team, helping customers validate and verify postal addresses, emails, and phone numbers at scale.",
-				"Resolved technical cases involving API integrations, data quality issues, and configuration questions, ensuring high availability and accuracy of DaaS services.",
-				"Created and maintained internal documentation and troubleshooting notes to streamline case handling for the wider support team.",
-				"Built small automation scripts (e.g., log parsing, quick checks) using Python/Unix tools to reduce repetitive work and improve response times.",
+				{
+					id: "tse-1",
+					content: (
+						<>
+							Supported the{" "}
+							<strong className="font-semibold">
+								Data as a Service (DaaS)
+							</strong>{" "}
+							team, helping customers{" "}
+							<strong className="font-semibold">validate and verify</strong>{" "}
+							postal addresses, emails, and phone numbers{" "}
+							<strong className="font-semibold">at scale</strong>.
+						</>
+					),
+				},
+				{
+					id: "tse-2",
+					content: (
+						<>
+							Resolved technical cases involving{" "}
+							<strong className="font-semibold">API integrations</strong>,{" "}
+							<strong className="font-semibold">data quality issues</strong>,
+							and{" "}
+							<strong className="font-semibold">configuration questions</strong>
+							, ensuring{" "}
+							<strong className="font-semibold">high availability</strong> and{" "}
+							<strong className="font-semibold">accuracy</strong> of DaaS
+							services.
+						</>
+					),
+				},
+				{
+					id: "tse-3",
+					content: (
+						<>
+							Created and maintained{" "}
+							<strong className="font-semibold">internal documentation</strong>{" "}
+							and{" "}
+							<strong className="font-semibold">troubleshooting notes</strong>{" "}
+							to{" "}
+							<strong className="font-semibold">
+								streamline case handling
+							</strong>{" "}
+							for the wider support team.
+						</>
+					),
+				},
+				{
+					id: "tse-4",
+					content: (
+						<>
+							Built small{" "}
+							<strong className="font-semibold">automation scripts</strong>{" "}
+							(e.g., log parsing, quick checks) using{" "}
+							<strong className="font-semibold">Python/Unix tools</strong> to{" "}
+							<strong className="font-semibold">reduce repetitive work</strong>{" "}
+							and{" "}
+							<strong className="font-semibold">improve response times</strong>.
+						</>
+					),
+				},
 			],
 		},
 		{
@@ -41,8 +174,32 @@ export default function WorkExperiencePage() {
 			summary:
 				"Refurbished and serviced electronic devices as part of the Flipkart refurbishing program.",
 			highlights: [
-				"Refurbished and serviced electronic devices as part of the Flipkart refurbishing program, focusing on quality and turnaround time.",
-				"Conducted technical training for new team members and introduced process improvements that reduced repair TAT by ~25%.",
+				{
+					id: "f1-1",
+					content: (
+						<>
+							Refurbished and serviced electronic devices as part of the{" "}
+							<strong className="font-semibold">
+								Flipkart refurbishing program
+							</strong>
+							, focusing on <strong className="font-semibold">quality</strong>{" "}
+							and <strong className="font-semibold">turnaround time</strong>.
+						</>
+					),
+				},
+				{
+					id: "f1-2",
+					content: (
+						<>
+							Conducted{" "}
+							<strong className="font-semibold">technical training</strong> for
+							new team members and introduced{" "}
+							<strong className="font-semibold">process improvements</strong>{" "}
+							that reduced repair <strong className="font-semibold">TAT</strong>{" "}
+							by ~25%.
+						</>
+					),
+				},
 			],
 		},
 	];
@@ -90,7 +247,7 @@ export default function WorkExperiencePage() {
 								{/* Highlights — show first 2 by default, rest under "Show more" */}
 								<ul className="mt-3 list-disc pl-5 space-y-1 text-sm">
 									{role.highlights.slice(0, 2).map((h) => (
-										<li key={h}>{h}</li>
+										<li key={h.id}>{h.content}</li>
 									))}
 								</ul>
 								{role.highlights.length > 2 && (
@@ -100,7 +257,7 @@ export default function WorkExperiencePage() {
 										</summary>
 										<ul className="mt-2 list-disc pl-5 space-y-1 text-sm">
 											{role.highlights.slice(2).map((h) => (
-												<li key={h}>{h}</li>
+												<li key={h.id}>{h.content}</li>
 											))}
 										</ul>
 									</details>

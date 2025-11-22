@@ -2,8 +2,9 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export const metadata = {
-	title: "Resume — Shaik Noor",
+	title: "Resume - Shaik Noor",
 	description: "PDF resume viewer and download",
+	alternates: { canonical: "/resume" },
 };
 
 export default function ResumePage() {

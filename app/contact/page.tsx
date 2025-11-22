@@ -2,7 +2,8 @@ import Link from "next/link";
 import ContactForm from "@/components/contact-form";
 
 export const metadata = {
-	title: "Contact — Shaik Noor",
+	title: "Contact - Shaik Noor",
+	alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {

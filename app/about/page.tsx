@@ -15,11 +15,30 @@ import SocialActions from "@/components/social-actions";
 export const metadata = {
 	title: "About - Shaik Noor",
 	description: "About Shaik Noor Mohammad",
+	alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {
 	return (
 		<section className="mx-auto max-w-6xl space-y-8">
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						"@context": "https://schema.org",
+						"@type": "Person",
+						name: "Shaik Noor Mohammad",
+						url: "https://resume.noruj.com/about",
+						jobTitle: "Cloud Data & Integration Engineer",
+						worksFor: { "@type": "Organization", name: "Informatica" },
+						sameAs: [
+							"https://www.linkedin.com/in/shaik-noor/",
+							"https://github.com/shaik-noor",
+							"https://noruj.com",
+						],
+					}),
+				}}
+			/>
 			{/* Hero */}
 			<header className="relative overflow-hidden rounded-xl border bg-gradient-to-b from-muted/40 to-background">
 				<div className="grid gap-6 p-6 sm:grid-cols-[auto,1fr] sm:items-center">
@@ -45,22 +64,46 @@ export default function AboutPage() {
 						</div>
 						<div className="space-y-3 text-muted-foreground max-w-prose">
 							<p>
-								I’m a Cloud Data & Integration Engineer with 6+ years of
-								experience supporting and troubleshooting Informatica
-								PowerCenter and IDMC in a product engineering environment.
+								I’m a{" "}
+								<strong className="font-semibold">
+									Cloud Data & Integration Engineer
+								</strong>{" "}
+								with <strong className="font-semibold">6+ years</strong> of
+								experience supporting and troubleshooting{" "}
+								<strong className="font-semibold">
+									Informatica PowerCenter
+								</strong>{" "}
+								and <strong className="font-semibold">IDMC</strong> in a product
+								engineering environment.
 							</p>
 							<p>
-								I specialize in debugging complex ETL issues, analyzing logs and
-								stack traces, and working with product and R&D teams to
-								stabilize mission-critical data pipelines. Recently, I’ve been
-								expanding into IDMC administration, cloud data integration, and
-								PowerCenter-to-cloud migration using internal Informatica
-								training.
+								I specialize in{" "}
+								<strong className="font-semibold">
+									debugging complex ETL issues
+								</strong>
+								, analyzing{" "}
+								<strong className="font-semibold">logs and stack traces</strong>
+								, and working with product and R&D teams to stabilize{" "}
+								<strong className="font-semibold">
+									mission-critical data pipelines
+								</strong>
+								. Recently, I’ve been expanding into{" "}
+								<strong className="font-semibold">IDMC administration</strong>,{" "}
+								<strong className="font-semibold">
+									cloud data integration
+								</strong>
+								, and
+								<strong className="font-semibold">
+									PowerCenter-to-cloud migration
+								</strong>{" "}
+								using internal Informatica training.
 							</p>
 							<p>
-								Outside work, I build Noruj.com, an interactive learning and
-								documentation platform, which reflects my interest in practical
-								software engineering, data, and developer tools.
+								Outside work, I build{" "}
+								<strong className="font-semibold">Noruj.com</strong>, an
+								interactive learning and documentation platform, which reflects
+								my interest in practical software engineering, data, and
+								developer tools.
 							</p>
 						</div>
 						<div className="flex flex-wrap gap-2">
@@ -121,10 +164,26 @@ export default function AboutPage() {
 					</CardHeader>
 					<CardContent>
 						<ul className="mt-2 text-sm list-disc pl-5 space-y-1">
-							<li>PowerCenter &amp; IDMC product support</li>
-							<li>Technical assistance and troubleshooting</li>
-							<li>Issue triage and resolution</li>
-							<li>Cross-functional collaboration</li>
+							<li>
+								<strong className="font-semibold">
+									PowerCenter &amp; IDMC product support
+								</strong>
+							</li>
+							<li>
+								<strong className="font-semibold">
+									Technical assistance and troubleshooting
+								</strong>
+							</li>
+							<li>
+								<strong className="font-semibold">
+									Issue triage and resolution
+								</strong>
+							</li>
+							<li>
+								<strong className="font-semibold">
+									Cross-functional collaboration
+								</strong>
+							</li>
 						</ul>
 					</CardContent>
 				</Card>

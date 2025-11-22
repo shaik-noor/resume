@@ -1,5 +1,6 @@
 export const metadata = {
-	title: "Educations — Shaik Noor",
+	title: "Educations - Shaik Noor",
+	alternates: { canonical: "/educations" },
 };
 
 export default function EducationsPage() {

@@ -1,5 +1,6 @@
 export const metadata = {
-	title: "Certificates — Shaik Noor",
+	title: "Certificates - Shaik Noor",
+	alternates: { canonical: "/certificates" },
 };
 
 import Image from "next/image";
