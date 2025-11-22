@@ -12,7 +12,7 @@ export default function ResumePage() {
 			<header className="flex items-center justify-between">
 				<h1 className="text-2xl md:text-3xl font-bold">Resume</h1>
 				<Button asChild variant="outline">
-					<Link href="/resume.pdf" target="_blank">
+					<Link href="/shaik-noor-resume.pdf" target="_blank">
 						Download PDF
 					</Link>
 				</Button>
@@ -20,7 +20,7 @@ export default function ResumePage() {
 
 			<div className="rounded-lg border overflow-hidden">
 				<object
-					data="/resume.pdf"
+					data="/shaik-noor-resume.pdf"
 					type="application/pdf"
 					className="w-full h-[80vh]"
 				>
@@ -30,8 +30,8 @@ export default function ResumePage() {
 							button above.
 						</p>
 						<p className="text-xs text-muted-foreground">
-							Note: Place your file at <code>public/resume.pdf</code> to render
-							it here.
+							Note: Place your file at <code>public/shaik-noor-resume.pdf</code>{" "}
+							to render it here.
 						</p>
 					</div>
 				</object>

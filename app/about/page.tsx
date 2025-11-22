@@ -40,15 +40,29 @@ export default function AboutPage() {
 								Hi, I&apos;m Shaik Noor Mohammad
 							</h1>
 							<Badge variant="secondary" className="text-xs">
-								Support Engineer @ Informatica
+								Cloud Data & Integration Engineer
 							</Badge>
 						</div>
-						<p className="text-muted-foreground max-w-prose">
-							I specialize in PowerCenter and IDMC product support with a focus
-							on technical assistance, troubleshooting, and software issue
-							resolution. I collaborate with cross-functional teams to deliver
-							efficient and scalable solutions.
-						</p>
+						<div className="space-y-3 text-muted-foreground max-w-prose">
+							<p>
+								I’m a Cloud Data & Integration Engineer with 6+ years of
+								experience supporting and troubleshooting Informatica
+								PowerCenter and IDMC in a product engineering environment.
+							</p>
+							<p>
+								I specialize in debugging complex ETL issues, analyzing logs and
+								stack traces, and working with product and R&D teams to
+								stabilize mission-critical data pipelines. Recently, I’ve been
+								expanding into IDMC administration, cloud data integration, and
+								PowerCenter-to-cloud migration using internal Informatica
+								training.
+							</p>
+							<p>
+								Outside work, I build Noruj.com, an interactive learning and
+								documentation platform, which reflects my interest in practical
+								software engineering, data, and developer tools.
+							</p>
+						</div>
 						<div className="flex flex-wrap gap-2">
 							<Link href="/resume">
 								<Button size="sm">View Resume</Button>
@@ -75,7 +89,7 @@ export default function AboutPage() {
 							</Badge>
 						</div>
 						<p className="mt-2 text-xl font-semibold tracking-tight">
-							5 years 10 months
+							6+ years
 						</p>
 					</CardContent>
 				</Card>
@@ -91,7 +105,7 @@ export default function AboutPage() {
 					<CardContent className="py-4">
 						<span className="text-xs text-muted-foreground">Focus</span>
 						<p className="mt-2 text-xl font-semibold tracking-tight">
-							PowerCenter, IDMC
+							PowerCenter · IDMC · Cloud ETL
 						</p>
 					</CardContent>
 				</Card>
@@ -142,9 +156,10 @@ export default function AboutPage() {
 						{[
 							"PowerCenter",
 							"IDMC",
+							"Cloud ETL",
+							"SQL",
 							"Python",
 							"JavaScript",
-							"SQL",
 							"PostgreSQL",
 							"Docker",
 							"GitHub",
@@ -154,6 +169,36 @@ export default function AboutPage() {
 							</Badge>
 						))}
 					</div>
+				</CardContent>
+			</Card>
+
+			<Card>
+				<CardHeader className="border-b">
+					<CardTitle>Project</CardTitle>
+					<CardDescription>
+						Noruj.com - Interactive Knowledge & Workflow Platform
+					</CardDescription>
+				</CardHeader>
+				<CardContent>
+					<p className="text-sm text-muted-foreground">
+						Personal SaaS project built to organize knowledge using visual
+						workflows and rich documents.
+					</p>
+					<ul className="mt-2 list-disc pl-5 space-y-1 text-sm">
+						<li>
+							Designed and built features for visual workflows, document
+							management, and collaboration (public and private documents,
+							sharing, and search).
+						</li>
+						<li>
+							Worked end-to-end across front-end, back-end, and deployment,
+							strengthening skills in JavaScript, databases, and cloud concepts.
+						</li>
+						<li>
+							Focused on secure, structured knowledge storage, including privacy
+							controls and scalable architecture.
+						</li>
+					</ul>
 				</CardContent>
 			</Card>
 		</section>

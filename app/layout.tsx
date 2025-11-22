@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
 	title: "Shaik Noor Mohammad",
-	description: "Software Engineer",
+	description: "Cloud Data & Integration Engineer (PowerCenter & IDMC)",
 };
 
 export default function RootLayout({

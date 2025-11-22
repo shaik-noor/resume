@@ -10,7 +10,11 @@ type Skill = {
 
 const dataIntegrationSkills: Skill[] = [
 	{
-		name: "PowerCenter & IDMC",
+		name: "Informatica PowerCenter",
+		image: "https://companieslogo.com/img/orig/INFA-c4767c1c.png",
+	},
+	{
+		name: "Informatica IDMC",
 		image: "https://companieslogo.com/img/orig/INFA-c4767c1c.png",
 	},
 	{
@@ -40,6 +44,11 @@ const programmingLanguages: Skill[] = [
 		name: "JavaScript",
 		image:
 			"https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+	},
+	{
+		name: "Shell scripting (Linux/Unix)",
+		image:
+			"https://upload.wikimedia.org/wikipedia/commons/8/82/Gnu-bash-logo.svg",
 	},
 ];
 
@@ -88,6 +97,15 @@ const tools: Skill[] = [
 		image:
 			"https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg",
 	},
+	{
+		name: "Linux",
+		image: "https://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png",
+	},
+	{
+		name: "Basic cloud (Intro to Cloud Computing – IBM)",
+		image:
+			"https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~92PBMQLY7YF3/CERTIFICATE_LANDING_PAGE~92PBMQLY7YF3.jpeg",
+	},
 ];
 
 function SkillsGrid({ title, items }: { title: string; items: Skill[] }) {
@@ -130,9 +148,12 @@ export default function SkillsPage() {
 				title="Data Integration & Orchestration"
 				items={dataIntegrationSkills}
 			/>
-			<SkillsGrid title="Programming Languages" items={programmingLanguages} />
+			<SkillsGrid
+				title="Programming & Scripting"
+				items={programmingLanguages}
+			/>
 			<SkillsGrid title="Databases" items={databases} />
-			<SkillsGrid title="Tools" items={tools} />
+			<SkillsGrid title="Platforms & Tools" items={tools} />
 		</section>
 	);
 }

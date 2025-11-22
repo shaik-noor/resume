@@ -49,6 +49,21 @@ export default function CertificatesPage() {
 				"Integrate applications and systems, implement business processes using process designer that can access data from on-premise as well as cloud, and expose them as composite APIs.",
 			skills: ["Informatica", "ETL", "Data Integration", "CAI"],
 		},
+		{
+			title:
+				"IDMC: Administration Fundamentals (Internal – In Progress / Completed)",
+			image: "/assets/informatica_logo.jpg",
+			description:
+				"Learned core IDMC org administration, including secure agent installation and management, connector enablement, connection and schedule setup, sub-org and license management, user and role configuration, and monitoring via asset and security logs.",
+			skills: ["IDMC", "Administration", "Secure Agent", "Monitoring"],
+		},
+		{
+			title: "PowerCenter to Informatica Cloud – Migration Training (Internal)",
+			image: "/assets/informatica_logo.jpg",
+			description:
+				"Covered best practices for exporting PowerCenter workflows/mapplets into IDMC, validating migrated assets, and handling typical migration challenges when moving on-prem ETL workloads to cloud.",
+			skills: ["PowerCenter", "IDMC", "Migration", "Cloud ETL"],
+		},
 	];
 
 	// Other certificates

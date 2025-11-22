@@ -8,27 +8,29 @@ export default function WorkExperiencePage() {
 		{
 			company: "Informatica",
 			title: "Software Engineer",
-			period: "Aug 2023 – Present • 2 years 3 months",
+			period: "Aug 2023 – Present",
 			logo: "/assets/informatica_logo.jpg",
 			summary:
-				"Providing expert-level technical assistance and troubleshooting for Informatica PowerCenter and IDMC products, ensuring optimal performance and customer satisfaction.",
+				"Provide L2/L3 support for PowerCenter and IDMC across performance, connectivity, configuration, and upgrades.",
 			highlights: [
-				"Collaborating with Product Specialist teams to analyze and resolve complex technical issues through detailed investigation of stack traces, logs, and system configurations.",
-				"Working closely with R&D teams to identify, document, and address product bugs and vulnerabilities, contributing to enhanced product stability and security.",
-				"Leading the implementation and testing of Emergency Bug Fix (EBF) releases, ensuring rapid deployment of critical fixes to maintain system reliability.",
-				"Developing and implementing efficient debugging strategies to minimize customer downtime and optimize issue resolution processes.",
+				"Provide L2/L3 technical support for Informatica PowerCenter and IDMC, troubleshooting complex customer issues across performance, connectivity, configuration, and upgrade scenarios.",
+				"Analyze stack traces, logs, and system configurations to identify root causes and drive permanent fixes in collaboration with Product Specialists and R&D teams.",
+				"Lead the implementation and validation of Emergency Bug Fix (EBF) releases, ensuring critical patches are tested, documented, and rolled out with minimal customer impact.",
+				"Develop and follow repeatable debugging playbooks to reduce mean time to resolution (MTTR) and improve case handling quality.",
+				"Currently upskilling on IDMC Administration Fundamentals and PowerCenter to Informatica Cloud migration through Informatica internal training to support customers on their cloud-migration journey.",
 			],
 		},
 		{
 			company: "Informatica",
 			title: "Technical Support Engineer",
-			period: "Jul 2020 – Jul 2023 • 3 years",
+			period: "Jul 2020 – Jul 2023",
 			logo: "/assets/informatica_logo.jpg",
-			summary:
-				"Worked with the Data as a Service team to validate and verify postal addresses, emails, and phone numbers.",
+			summary: "Supported the Data as a Service team at scale.",
 			highlights: [
-				"Assisted clients with technical issues, documentation, and case escalations.",
-				"Developed automation scripts to improve workflow efficiency.",
+				"Supported the Data as a Service (DaaS) team, helping customers validate and verify postal addresses, emails, and phone numbers at scale.",
+				"Resolved technical cases involving API integrations, data quality issues, and configuration questions, ensuring high availability and accuracy of DaaS services.",
+				"Created and maintained internal documentation and troubleshooting notes to streamline case handling for the wider support team.",
+				"Built small automation scripts (e.g., log parsing, quick checks) using Python/Unix tools to reduce repetitive work and improve response times.",
 			],
 		},
 		{
@@ -37,10 +39,10 @@ export default function WorkExperiencePage() {
 			period: "Oct 2018 – May 2019 • 7 months",
 			logo: "/assets/f1_info_solutions__services_private_limited_logo.jpg",
 			summary:
-				"Part of the refurbishing and servicing team, responsible for restoring and servicing electronic devices.",
+				"Refurbished and serviced electronic devices as part of the Flipkart refurbishing program.",
 			highlights: [
-				"Led technical training sessions for new team members.",
-				"Optimized repair processes reducing turnaround time by 25%.",
+				"Refurbished and serviced electronic devices as part of the Flipkart refurbishing program, focusing on quality and turnaround time.",
+				"Conducted technical training for new team members and introduced process improvements that reduced repair TAT by ~25%.",
 			],
 		},
 	];

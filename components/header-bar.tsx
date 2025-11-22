@@ -34,7 +34,7 @@ export default function HeaderBar() {
 									Shaik Noor Mohammad
 								</span>
 								<span className="truncate text-xs text-muted-foreground">
-									Software Engineer
+									Cloud Data & Integration Engineer (PowerCenter & IDMC)
 								</span>
 							</div>
 						</div>

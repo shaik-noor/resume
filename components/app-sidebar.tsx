@@ -77,7 +77,8 @@ export function AppSidebar() {
 								</Link>
 							</TooltipTrigger>
 							<TooltipContent side="right" align="center">
-								Shaik Noor Mohammad — Software Engineer
+								Shaik Noor Mohammad — Cloud Data & Integration Engineer
+								(PowerCenter & IDMC)
 							</TooltipContent>
 						</Tooltip>
 					</div>
@@ -91,7 +92,7 @@ export function AppSidebar() {
 								Shaik Noor Mohammad
 							</span>
 							<span className="truncate text-xs text-muted-foreground">
-								Software Engineer
+								Cloud Data & Integration Engineer (PowerCenter & IDMC)
 							</span>
 						</div>
 					</div>
@@ -136,7 +137,9 @@ export function AppSidebar() {
 			{state !== "collapsed" && (
 				<SidebarFooter>
 					<div className="px-3 py-2 text-xs text-muted-foreground">
-						<p className="mb-1">PowerCenter • IDMC • Troubleshooting</p>
+						<p className="mb-1">
+							PowerCenter · IDMC · Cloud ETL · SQL · Python
+						</p>
 						<Badge variant="secondary" className="text-[10px]">
 							Open to opportunities
 						</Badge>
