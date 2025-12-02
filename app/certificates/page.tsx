@@ -3,7 +3,7 @@ export const metadata = {
 	alternates: { canonical: "/certificates" },
 };
 
-import Image from "next/image";
+import CertificatesGrid from "@/components/certificates-grid";
 type Certificate = {
 	title: string;
 	image: string;
@@ -15,6 +15,14 @@ type Certificate = {
 export default function CertificatesPage() {
 	// Informatica certificates (images expected under `public/assets/certificates/*`)
 	const informaticaCertificates: Certificate[] = [
+				{
+			title:
+			"IDMC: Administration Fundamentals",
+			image: "/assets/certificates/IDMC-Admin-Fundamentals.png",
+			description:
+				"Learned core IDMC org administration, including secure agent installation and management, connector enablement, connection and schedule setup, sub-org and license management, user and role configuration, and monitoring via asset and security logs.",
+			skills: ["IDMC", "Administration", "Secure Agent", "Monitoring"],
+		},
 		{
 			title: "PowerCenter-to-Cloud Migration",
 			image: "/assets/certificates/PC-TO-IDMC-certificate.png",
@@ -57,14 +65,7 @@ export default function CertificatesPage() {
 				"Integrate applications and systems, implement business processes using process designer that can access data from on-premise as well as cloud, and expose them as composite APIs.",
 			skills: ["Informatica", "ETL", "Data Integration", "CAI"],
 		},
-		{
-			title:
-			"IDMC: Administration Fundamentals",
-			image: "/assets/informatica_logo.jpg",
-			description:
-				"Learned core IDMC org administration, including secure agent installation and management, connector enablement, connection and schedule setup, sub-org and license management, user and role configuration, and monitoring via asset and security logs.",
-			skills: ["IDMC", "Administration", "Secure Agent", "Monitoring"],
-		},
+
 	];
 
 	// Other certificates
@@ -141,92 +142,10 @@ export default function CertificatesPage() {
 					Selected certifications and trainings.
 				</p>
 			</header>
-
-			{/* Informatica */}
-			<div className="space-y-4">
-				<h2 className="text-lg font-semibold">Informatica Certificates</h2>
-				<div className="grid gap-4 sm:grid-cols-2">
-					{informaticaCertificates.map((c) => (
-						<div
-							key={c.title}
-							className="rounded-lg border p-0 overflow-hidden"
-						>
-							<div className="aspect-video w-full bg-muted relative">
-								<Image
-									src={c.image}
-									alt={c.title}
-									fill
-									unoptimized
-									className="object-cover"
-								/>
-							</div>
-							<div className="p-4 space-y-2">
-								<h3 className="text-sm font-semibold">{c.title}</h3>
-								<p className="text-xs text-muted-foreground">{c.description}</p>
-								<div className="flex flex-wrap gap-1.5 pt-2">
-									{c.skills.map((s) => (
-										<span
-											key={s}
-											className="inline-flex items-center rounded-full border px-2 py-0.5 text-[11px]"
-										>
-											{s}
-										</span>
-									))}
-								</div>
-							</div>
-						</div>
-					))}
-				</div>
-			</div>
-
-			{/* Other */}
-			<div className="space-y-4">
-				<h2 className="text-lg font-semibold">Other Certificates</h2>
-				<div className="grid gap-4 sm:grid-cols-2">
-					{otherCertificates.map((c) => (
-						<div
-							key={c.title}
-							className="rounded-lg border p-0 overflow-hidden"
-						>
-							<div className="aspect-video w-full bg-muted relative">
-								<Image
-									src={c.image}
-									alt={c.title}
-									fill
-									unoptimized
-									className="object-cover"
-								/>
-							</div>
-							<div className="p-4 space-y-2">
-								<h3 className="text-sm font-semibold">{c.title}</h3>
-								<p className="text-xs text-muted-foreground">{c.description}</p>
-								<div className="flex flex-wrap gap-1.5 pt-2">
-									{c.skills.map((s) => (
-										<span
-											key={s}
-											className="inline-flex items-center rounded-full border px-2 py-0.5 text-[11px]"
-										>
-											{s}
-										</span>
-									))}
-								</div>
-								{c.link && (
-									<div className="pt-3">
-										<a
-											className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md border bg-background text-sm font-medium transition-all hover:bg-accent hover:text-accent-foreground h-8 px-3"
-											href={c.link}
-											target="_blank"
-											rel="noopener noreferrer"
-										>
-											View certificate
-										</a>
-									</div>
-								)}
-							</div>
-						</div>
-					))}
-				</div>
-			</div>
+			<CertificatesGrid
+				informaticaCertificates={informaticaCertificates}
+				otherCertificates={otherCertificates}
+			/>
 		</section>
 	);
 }

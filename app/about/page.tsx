@@ -120,7 +120,7 @@ export default function AboutPage() {
 					</div>
 					<div className="grid gap-3 sm:grid-cols-3">
 						<Card>
-							<CardContent className="py-4">
+							<CardContent>
 								<div className="flex items-baseline justify-between">
 									<span className="text-xs text-muted-foreground">
 										Experience
@@ -135,7 +135,7 @@ export default function AboutPage() {
 							</CardContent>
 						</Card>
 						<Card>
-							<CardContent className="py-4">
+							<CardContent >
 								<span className="text-xs text-muted-foreground">Company</span>
 								<p className="mt-2 text-xl font-semibold tracking-tight">
 									Informatica
@@ -143,7 +143,7 @@ export default function AboutPage() {
 							</CardContent>
 						</Card>
 						<Card>
-							<CardContent className="py-4">
+							<CardContent>
 								<span className="text-xs text-muted-foreground">Focus</span>
 								<p className="mt-2 text-xl font-semibold tracking-tight">
 									PowerCenter · IDMC · Cloud ETL
