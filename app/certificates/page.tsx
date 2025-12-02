@@ -16,6 +16,13 @@ export default function CertificatesPage() {
 	// Informatica certificates (images expected under `public/assets/certificates/*`)
 	const informaticaCertificates: Certificate[] = [
 		{
+			title: "PowerCenter-to-Cloud Migration",
+			image: "/assets/certificates/PC-TO-IDMC-certificate.png",
+			description:
+				"Learned the PowerCenter-to-Cloud Migration process, including the migration of mappings, mapplet and workflows to the Informatica Intelligent Data Management Cloud (IDMC).",
+			skills: ["ETL", "Administration", "PowerCenter", "IDMC"],
+		},
+		{
 			title: "Informatica Platform Administration Fundamentals",
 			image: "/assets/certificates/platform_admin_fundamentals.png",
 			description:
@@ -52,18 +59,11 @@ export default function CertificatesPage() {
 		},
 		{
 			title:
-				"IDMC: Administration Fundamentals (Internal – In Progress / Completed)",
+			"IDMC: Administration Fundamentals",
 			image: "/assets/informatica_logo.jpg",
 			description:
 				"Learned core IDMC org administration, including secure agent installation and management, connector enablement, connection and schedule setup, sub-org and license management, user and role configuration, and monitoring via asset and security logs.",
 			skills: ["IDMC", "Administration", "Secure Agent", "Monitoring"],
-		},
-		{
-			title: "PowerCenter to Informatica Cloud – Migration Training (Internal)",
-			image: "/assets/informatica_logo.jpg",
-			description:
-				"Covered best practices for exporting PowerCenter workflows/mapplets into IDMC, validating migrated assets, and handling typical migration challenges when moving on-prem ETL workloads to cloud.",
-			skills: ["PowerCenter", "IDMC", "Migration", "Cloud ETL"],
 		},
 	];
 
