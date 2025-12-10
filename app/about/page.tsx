@@ -57,7 +57,7 @@ export default function AboutPage() {
 						<h1 className="mt-4 text-xl md:text-2xl font-semibold text-center">
 							Shaik Noor Mohammad
 						</h1>
-						<Badge variant="secondary" className="mt-2 text-xs text-center">
+						<Badge variant="secondary" className="mt-2 text-xs text-center whitespace-normal h-auto">
 							Informatica PowerCenter Developer & Cloud Data Integration Engineer
 						</Badge>
 						<div className="mt-4 w-full flex flex-wrap gap-2 justify-center">
