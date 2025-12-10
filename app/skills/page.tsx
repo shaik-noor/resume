@@ -9,55 +9,33 @@ type Skill = {
 	image: string;
 };
 
-const dataIntegrationSkills: Skill[] = [
+const informaticaEtl: Skill[] = [
 	{
-		name: "Informatica PowerCenter",
+		name: "Informatica PowerCenter (10.4 – 10.5.9)",
 		image: "https://companieslogo.com/img/orig/INFA-c4767c1c.png",
 	},
 	{
-		name: "Informatica IDMC",
+		name: "Informatica IDMC / IICS",
 		image: "https://companieslogo.com/img/orig/INFA-c4767c1c.png",
 	},
 	{
-		name: "Apache Nifi",
-		image:
-			"https://cms.acte.ltd/storage/app/uploads/public/665/2e2/814/6652e28144ba5040936680.png",
+		name: "ETL Design & Troubleshooting",
+		image: "https://cdn-icons-png.flaticon.com/512/2103/2103633.png", // Generic data icon
 	},
 	{
-		name: "Pentaho Data Integration",
-		image:
-			"https://miro.medium.com/v2/resize:fit:532/1*EMEANIXZP2H55rTm_S1FCQ.png",
-	},
-	{
-		name: "Airflow",
-		image:
-			"https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/AirflowLogo.png/800px-AirflowLogo.png",
+		name: "Performance Tuning",
+		image: "https://cdn-icons-png.flaticon.com/512/3050/3050525.png", // Generic speed icon
 	},
 ];
 
-const programmingLanguages: Skill[] = [
+const databasesSql: Skill[] = [
 	{
-		name: "Python",
-		image:
-			"https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
+		name: "Oracle",
+		image: "https://www.svgrepo.com/show/354152/oracle.svg",
 	},
 	{
-		name: "JavaScript",
-		image:
-			"https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
-	},
-	{
-		name: "Shell scripting (Linux/Unix)",
-		image:
-			"https://upload.wikimedia.org/wikipedia/commons/8/82/Gnu-bash-logo.svg",
-	},
-];
-
-const databases: Skill[] = [
-	{
-		name: "SQL",
-		image:
-			"https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png",
+		name: "SQL Server",
+		image: "/assets/mssqlserver.png",
 	},
 	{
 		name: "PostgreSQL",
@@ -65,36 +43,54 @@ const databases: Skill[] = [
 			"https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg",
 	},
 	{
-		name: "Oracle Database",
-		image: "https://www.svgrepo.com/show/354152/oracle.svg",
-	},
-	{
-		name: "MS SQL Server",
-		image: "/assets/mssqlserver.png",
-	},
-	{
-		name: "IBM Db2",
-		image: "/assets/db2.png",
-	},
-	{
-		name: "MongoDB",
+		name: "Complex SQL & PL/SQL",
 		image:
-			"https://upload.wikimedia.org/wikipedia/commons/9/93/MongoDB_Logo.svg",
+			"https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png",
 	},
 	{
-		name: "Redis",
-		image:
-			"https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Redis_logo.svg/1280px-Redis_logo.svg.png",
+		name: "Semi-structured Data",
+		image: "https://cdn-icons-png.flaticon.com/512/2906/2906274.png", // Generic json/xml icon
 	},
 ];
 
-const tools: Skill[] = [
+const unixLinuxAutomation: Skill[] = [
+	{
+		name: "Shell Scripting",
+		image:
+			"https://upload.wikimedia.org/wikipedia/commons/8/82/Gnu-bash-logo.svg",
+	},
+	{
+		name: "Log Parsing & Monitoring",
+		image: "https://cdn-icons-png.flaticon.com/512/1041/1041697.png", // Generic terminal icon
+	},
+	{
+		name: "Process Automation",
+		image: "https://cdn-icons-png.flaticon.com/512/2082/2082987.png", // Generic gear icon
+	},
+];
+
+const dataPlatformsTools: Skill[] = [
+	{
+		name: "Apache NiFi",
+		image:
+			"https://cms.acte.ltd/storage/app/uploads/public/665/2e2/814/6652e28144ba5040936680.png",
+	},
+	{
+		name: "Pentaho (PDI)",
+		image:
+			"https://miro.medium.com/v2/resize:fit:532/1*EMEANIXZP2H55rTm_S1FCQ.png",
+	},
+	{
+		name: "Apache Airflow",
+		image:
+			"https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/AirflowLogo.png/800px-AirflowLogo.png",
+	},
 	{
 		name: "Docker",
 		image: "https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png",
 	},
 	{
-		name: "GitHub",
+		name: "Git",
 		image:
 			"https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg",
 	},
@@ -102,10 +98,24 @@ const tools: Skill[] = [
 		name: "Linux",
 		image: "https://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png",
 	},
+];
+
+const waysOfWorking: Skill[] = [
 	{
-		name: "Basic cloud (Intro to Cloud Computing – IBM)",
-		image:
-			"https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~92PBMQLY7YF3/CERTIFICATE_LANDING_PAGE~92PBMQLY7YF3.jpeg",
+		name: "Production Support (L2/L3)",
+		image: "https://cdn-icons-png.flaticon.com/512/4230/4230752.png", // Support icon
+	},
+	{
+		name: "Agile/Scrum",
+		image: "https://cdn-icons-png.flaticon.com/512/1063/1063376.png", // Agile icon
+	},
+	{
+		name: "Cross-functional Collaboration",
+		image: "https://cdn-icons-png.flaticon.com/512/1256/1256650.png", // Team icon
+	},
+	{
+		name: "Documentation & Technical Writing",
+		image: "https://cdn-icons-png.flaticon.com/512/2535/2535555.png", // Doc icon
 	},
 ];
 
@@ -141,20 +151,15 @@ export default function SkillsPage() {
 			<header>
 				<h1 className="text-2xl md:text-3xl font-bold">Skills</h1>
 				<p className="text-sm text-muted-foreground">
-					Core competencies and tools.
+					Core competencies, tools, and methodologies.
 				</p>
 			</header>
 
-			<SkillsGrid
-				title="Data Integration & Orchestration"
-				items={dataIntegrationSkills}
-			/>
-			<SkillsGrid
-				title="Programming & Scripting"
-				items={programmingLanguages}
-			/>
-			<SkillsGrid title="Databases" items={databases} />
-			<SkillsGrid title="Platforms & Tools" items={tools} />
+			<SkillsGrid title="Informatica & ETL" items={informaticaEtl} />
+			<SkillsGrid title="Databases & SQL" items={databasesSql} />
+			<SkillsGrid title="Unix/Linux & Automation" items={unixLinuxAutomation} />
+			<SkillsGrid title="Data Platforms & Tools" items={dataPlatformsTools} />
+			<SkillsGrid title="Ways of Working" items={waysOfWorking} />
 		</section>
 	);
 }

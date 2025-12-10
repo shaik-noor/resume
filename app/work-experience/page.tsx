@@ -9,24 +9,16 @@ export default function WorkExperiencePage() {
 		{
 			company: "Informatica",
 			title: "Software Engineer",
-			period: "Aug 2023 – Present",
+			period: "Aug 2023 - Current",
 			logo: "/assets/informatica_logo.jpg",
 			summary:
-				"Provide L2/L3 support for PowerCenter and IDMC across performance, connectivity, configuration, and upgrades.",
+				"Provide L2/L3 technical support for Informatica PowerCenter and IDMC (IICS) for global enterprise customers.",
 			highlights: [
 				{
 					id: "se-1",
 					content: (
 						<>
-							Provide <strong className="font-semibold">L2/L3</strong> technical
-							support for Informatica{" "}
-							<strong className="font-semibold">PowerCenter</strong> and{" "}
-							<strong className="font-semibold">IDMC</strong>, troubleshooting
-							complex customer issues across{" "}
-							<strong className="font-semibold">performance</strong>,{" "}
-							<strong className="font-semibold">connectivity</strong>,{" "}
-							<strong className="font-semibold">configuration</strong>, and{" "}
-							<strong className="font-semibold">upgrade</strong> scenarios.
+							Provide <strong className="font-semibold">L2/L3 technical support</strong> for Informatica PowerCenter (10.4–10.5.9, including 10.5.4) and IDMC (IICS) for global enterprise customers.
 						</>
 					),
 				},
@@ -34,14 +26,7 @@ export default function WorkExperiencePage() {
 					id: "se-2",
 					content: (
 						<>
-							Analyze <strong className="font-semibold">stack traces</strong>,{" "}
-							<strong className="font-semibold">logs</strong>, and system
-							configurations to identify{" "}
-							<strong className="font-semibold">root causes</strong> and drive{" "}
-							<strong className="font-semibold">permanent fixes</strong> in
-							collaboration with{" "}
-							<strong className="font-semibold">Product Specialists</strong> and{" "}
-							<strong className="font-semibold">R&amp;D</strong> teams.
+							Analyze <strong className="font-semibold">session logs, workflow logs, stack traces</strong>, and system configurations to identify root causes of ETL failures and performance issues.
 						</>
 					),
 				},
@@ -49,15 +34,7 @@ export default function WorkExperiencePage() {
 					id: "se-3",
 					content: (
 						<>
-							Lead the implementation and validation of{" "}
-							<strong className="font-semibold">Emergency Bug Fix (EBF)</strong>{" "}
-							releases, ensuring{" "}
-							<strong className="font-semibold">critical patches</strong> are{" "}
-							<strong className="font-semibold">tested</strong>,{" "}
-							<strong className="font-semibold">documented</strong>, and{" "}
-							<strong className="font-semibold">rolled out</strong> with{" "}
-							<strong className="font-semibold">minimal customer impact</strong>
-							.
+							Work with customer development teams to <strong className="font-semibold">debug and validate mappings, sessions, and workflows</strong>, including parameterization, connection objects, and session properties.
 						</>
 					),
 				},
@@ -65,14 +42,7 @@ export default function WorkExperiencePage() {
 					id: "se-4",
 					content: (
 						<>
-							Develop and follow repeatable{" "}
-							<strong className="font-semibold">debugging playbooks</strong> to
-							reduce{" "}
-							<strong className="font-semibold">
-								mean time to resolution (MTTR)
-							</strong>{" "}
-							and improve{" "}
-							<strong className="font-semibold">case handling quality</strong>.
+							Collaborate closely with Product Specialists and R&D to <strong className="font-semibold">triage product defects, validate fixes</strong>, and drive Emergency Bug Fix (EBF) implementations with minimal downtime.
 						</>
 					),
 				},
@@ -80,17 +50,23 @@ export default function WorkExperiencePage() {
 					id: "se-5",
 					content: (
 						<>
-							Currently upskilling on{" "}
-							<strong className="font-semibold">
-								IDMC Administration Fundamentals
-							</strong>{" "}
-							and{" "}
-							<strong className="font-semibold">
-								PowerCenter to Informatica Cloud migration
-							</strong>{" "}
-							through Informatica{" "}
-							<strong className="font-semibold">internal training</strong> to
-							support customers on their cloud-migration journey.
+							Assist customers during <strong className="font-semibold">upgrades and migration scenarios</strong> (PowerCenter to higher versions / IDMC), including regression analysis of critical ETL jobs.
+						</>
+					),
+				},
+				{
+					id: "se-6",
+					content: (
+						<>
+							Create and improve <strong className="font-semibold">runbooks, troubleshooting playbooks, and KB articles</strong> for recurring ETL and platform issues, accelerating resolution time and knowledge reuse.
+						</>
+					),
+				},
+				{
+					id: "se-7",
+					content: (
+						<>
+							Currently completing internal training on: <strong className="font-semibold">IDMC: Administration Fundamentals</strong> and <strong className="font-semibold">PowerCenter to Informatica Cloud – Migration Training</strong>.
 						</>
 					),
 				},
@@ -99,22 +75,16 @@ export default function WorkExperiencePage() {
 		{
 			company: "Informatica",
 			title: "Technical Support Engineer",
-			period: "Jul 2020 – Jul 2023",
+			period: "Jul 2020 - Jul 2023",
 			logo: "/assets/informatica_logo.jpg",
-			summary: "Supported the Data as a Service team at scale.",
+			summary:
+				"Served as a key technical contact for global customers using Informatica Data as a Service (DaaS).",
 			highlights: [
 				{
 					id: "tse-1",
 					content: (
 						<>
-							Supported the{" "}
-							<strong className="font-semibold">
-								Data as a Service (DaaS)
-							</strong>{" "}
-							team, helping customers{" "}
-							<strong className="font-semibold">validate and verify</strong>{" "}
-							postal addresses, emails, and phone numbers{" "}
-							<strong className="font-semibold">at scale</strong>.
+							Served as a key technical contact for global customers using <strong className="font-semibold">Informatica Data as a Service (DaaS)</strong>, helping validate and verify postal addresses, email IDs, and phone numbers at scale.
 						</>
 					),
 				},
@@ -122,68 +92,25 @@ export default function WorkExperiencePage() {
 					id: "tse-2",
 					content: (
 						<>
-							Resolved technical cases involving{" "}
-							<strong className="font-semibold">API integrations</strong>,{" "}
-							<strong className="font-semibold">data quality issues</strong>,
-							and{" "}
-							<strong className="font-semibold">configuration questions</strong>
-							, ensuring{" "}
-							<strong className="font-semibold">high availability</strong> and{" "}
-							<strong className="font-semibold">accuracy</strong> of DaaS
-							services.
-						</>
-					),
-				},
-				{
-					id: "tse-3",
-					content: (
-						<>
-							Created and maintained{" "}
-							<strong className="font-semibold">internal documentation</strong>{" "}
-							and{" "}
-							<strong className="font-semibold">troubleshooting notes</strong>{" "}
-							to{" "}
-							<strong className="font-semibold">
-								streamline case handling
-							</strong>{" "}
-							for the wider support team.
-						</>
-					),
-				},
-				{
-					id: "tse-4",
-					content: (
-						<>
-							Built small{" "}
-							<strong className="font-semibold">automation scripts</strong>{" "}
-							(e.g., log parsing, quick checks) using{" "}
-							<strong className="font-semibold">Python/Unix tools</strong> to{" "}
-							<strong className="font-semibold">reduce repetitive work</strong>{" "}
-							and{" "}
-							<strong className="font-semibold">improve response times</strong>.
+							Documented <strong className="font-semibold">recurring issues, troubleshooting steps, and best practices</strong> to help onboard new team members and improve support consistency.
 						</>
 					),
 				},
 			],
 		},
 		{
-			company: "F1 Info Solutions & Services (Flipkart Subsidiary)",
+			company: "F1 Info Solutions & Services Pvt Ltd",
 			title: "Senior Engineer",
-			period: "Oct 2018 – May 2019 • 7 months",
+			period: "Oct 2018 - May 2019",
 			logo: "/assets/f1_info_solutions__services_private_limited_logo.jpg",
 			summary:
-				"Refurbished and serviced electronic devices as part of the Flipkart refurbishing program.",
+				"Led technical training sessions and supported the refurbishing of electronic devices.",
 			highlights: [
 				{
 					id: "f1-1",
 					content: (
 						<>
-							Refurbished and serviced electronic devices as part of the{" "}
-							<strong className="font-semibold">
-								Flipkart refurbishing program
-							</strong>
-							, focusing on <strong className="font-semibold">quality</strong>{" "}
-							and <strong className="font-semibold">turnaround time</strong>.
+							Led <strong className="font-semibold">technical training sessions</strong> and supported the refurbishing of electronic devices for Flipkart’s refurbish program.
 						</>
 					),
 				},
@@ -191,12 +118,7 @@ export default function WorkExperiencePage() {
 					id: "f1-2",
 					content: (
 						<>
-							Conducted{" "}
-							<strong className="font-semibold">technical training</strong> for
-							new team members and introduced{" "}
-							<strong className="font-semibold">process improvements</strong>{" "}
-							that reduced repair <strong className="font-semibold">TAT</strong>{" "}
-							by ~25%.
+							Optimized repair workflows and introduced <strong className="font-semibold">process improvements</strong> that reduced turnaround time by ~25% while maintaining quality and reliability.
 						</>
 					),
 				},

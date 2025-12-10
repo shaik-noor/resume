@@ -15,20 +15,12 @@ type Certificate = {
 export default function CertificatesPage() {
 	// Informatica certificates (images expected under `public/assets/certificates/*`)
 	const informaticaCertificates: Certificate[] = [
-				{
-			title:
-			"IDMC: Administration Fundamentals",
-			image: "/assets/certificates/IDMC-Admin-Fundamentals.png",
-			description:
-				"Learned core IDMC org administration, including secure agent installation and management, connector enablement, connection and schedule setup, sub-org and license management, user and role configuration, and monitoring via asset and security logs.",
-			skills: ["IDMC", "Administration", "Secure Agent", "Monitoring"],
-		},
 		{
-			title: "PowerCenter-to-Cloud Migration",
-			image: "/assets/certificates/PC-TO-IDMC-certificate.png",
+			title: "Cloud Application Integration Services for Developers",
+			image: "/assets/certificates/cai_for_developers.png",
 			description:
-				"Learned the PowerCenter-to-Cloud Migration process, including the migration of mappings, mapplet and workflows to the Informatica Intelligent Data Management Cloud (IDMC).",
-			skills: ["ETL", "Administration", "PowerCenter", "IDMC"],
+				"Integrate applications and systems, implement business processes using process designer that can access data from on-premise as well as cloud, and expose them as composite APIs.",
+			skills: ["Informatica", "ETL", "Data Integration", "CAI"],
 		},
 		{
 			title: "Informatica Platform Administration Fundamentals",
@@ -41,7 +33,7 @@ export default function CertificatesPage() {
 			title: "PowerCenter Data Integration for Developers",
 			image: "/assets/certificates/pc_data_integration_for_developers.png",
 			description:
-				"Learned to design, build, test, and maintain real-world data integration systems with PowerCenter’s workbench tools. Learned to create and combine PowerCenter objects such as source and target definitions, data transformations, mappings, sessions, and workflows using best-practice methodology.",
+				"Learned to design, build, test, and maintain real-world data integration systems with PowerCenter’s workbench tools.",
 			skills: ["Data Integration", "ETL", "PowerCenter"],
 		},
 		{
@@ -52,85 +44,54 @@ export default function CertificatesPage() {
 			skills: ["Data Integration", "ETL", "PowerCenter"],
 		},
 		{
-			title: "PowerCenter Administration Fundamentals",
-			image: "/assets/certificates/pc_admin_fundamentals.png",
+			title: "IDMC: Administration Fundamentals",
+			image: "/assets/certificates/IDMC-Admin-Fundamentals.png",
 			description:
-				"Configuring, managing, securing, and monitoring the Informatica PowerCenter domain.",
-			skills: ["Administration", "PowerCenter"],
+				"Internal – In Progress / Completed. Core IDMC org administration, secure agent management, and user configuration.",
+			skills: ["IDMC", "Administration", "Secure Agent"],
 		},
 		{
-			title: "Cloud Application Integration Services for Developers",
-			image: "/assets/certificates/cai_for_developers.png",
+			title: "PowerCenter to Informatica Cloud – Migration Training",
+			image: "/assets/certificates/PC-TO-IDMC-certificate.png",
 			description:
-				"Integrate applications and systems, implement business processes using process designer that can access data from on-premise as well as cloud, and expose them as composite APIs.",
-			skills: ["Informatica", "ETL", "Data Integration", "CAI"],
+				"Internal. Learned the PowerCenter-to-Cloud Migration process, including the migration of mappings and workflows to IDMC.",
+			skills: ["ETL", "Migration", "PowerCenter", "IDMC"],
 		},
-
 	];
 
 	// Other certificates
 	const otherCertificates: Certificate[] = [
 		{
+			title: "Complete Web Developer",
+			image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/600px-JavaScript-logo.png",
+			description: "Zero To Mastery Academy",
+			skills: ["Web Development", "Full Stack"],
+		},
+		{
+			title: "Oracle Database Administrator Training",
+			image: "https://www.svgrepo.com/show/354152/oracle.svg",
+			description: "Tech360hub Software Solution",
+			skills: ["Oracle", "DBA", "SQL"],
+		},
+		{
 			title: "Unix Essential Training",
 			image: "/assets/Unix-Essential-Training.png",
-			link: "https://www.linkedin.com/learning/certificates/cf4c365df01bca16733b77fdf2bc677a06d979acb3788a3f99a085e5a6741294?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BPmDhBcr9RJKUgW0zwGu1Ng%3D%3D",
-			description:
-				"Learned the basics of working in Linux OS and using it for daily activities.",
+			link: "https://www.linkedin.com/learning/certificates/cf4c365df01bca16733b77fdf2bc677a06d979acb3788a3f99a085e5a6741294",
+			description: "LinkedIn Learning. Learned the basics of working in Linux OS.",
 			skills: ["Unix", "Linux"],
 		},
 		{
-			title: "Programming with JavaScript",
-			image:
-				"https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~QL5K32N2R2BY/CERTIFICATE_LANDING_PAGE~QL5K32N2R2BY.jpeg",
-			link: "https://coursera.org/share/9cf2c0e12fb114548bc544deca3ad5c0",
-			description:
-				"Learned the basics of JavaScript and how it is used to build web applications.",
-			skills: ["JavaScript", "Web Development"],
+			title: "Learning SQL Programming",
+			image: "https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png",
+			description: "LinkedIn Learning",
+			skills: ["SQL", "Database"],
 		},
 		{
 			title: "Python for Data Science, AI & Development",
-			image:
-				"https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~MS5SBOSEKEF0/CERTIFICATE_LANDING_PAGE~MS5SBOSEKEF0.jpeg",
+			image: "https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~MS5SBOSEKEF0/CERTIFICATE_LANDING_PAGE~MS5SBOSEKEF0.jpeg",
 			link: "https://coursera.org/share/e3b62b29e6198c25263c839ebc6464eb",
-			description:
-				"Gained a strong foundation in Python programming, including functions, objects, loops, and classes.",
-			skills: ["Python", "Data Engineering"],
-		},
-		{
-			title: "Python Project for Data Engineering",
-			image:
-				"https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~06OVSXNRSE2K/CERTIFICATE_LANDING_PAGE~06OVSXNRSE2K.jpeg",
-			link: "https://www.coursera.org/account/accomplishments/verify/06OVSXNRSE2K",
-			description:
-				"Gained a strong foundation in Python programming, including functions, objects, loops, and classes.",
-			skills: ["Python", "Data Engineering", "Flask", "SQL"],
-		},
-		{
-			title: "Introduction to Back-End Development",
-			image:
-				"https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~NETUFMJJTYBA/CERTIFICATE_LANDING_PAGE~NETUFMJJTYBA.jpeg",
-			link: "https://www.coursera.org/account/accomplishments/verify/NETUFMJJTYBA",
-			description:
-				"Learned the basics of back-end development, including server-side scripting, database management, and API design.",
-			skills: ["Backend", "JavaScript", "HTML", "CSS"],
-		},
-		{
-			title: "Introduction to Cloud Computing",
-			image:
-				"https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~92PBMQLY7YF3/CERTIFICATE_LANDING_PAGE~92PBMQLY7YF3.jpeg",
-			link: "https://www.coursera.org/account/accomplishments/verify/92PBMQLY7YF3",
-			description:
-				"Learned the basics of cloud computing, including cloud services, cloud architecture, and cloud security.",
-			skills: ["DevOps", "Serverless", "Microservices", "HybridMulticloud"],
-		},
-		{
-			title: "Getting Started with Git and GitHub",
-			image:
-				"https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~T8Z2BHCZZSFD/CERTIFICATE_LANDING_PAGE~T8Z2BHCZZSFD.jpeg",
-			link: "https://www.coursera.org/account/accomplishments/verify/T8Z2BHCZZSFD",
-			description:
-				"Learned the basics of Git and GitHub, including creating repositories, committing changes, and collaborating with others.",
-			skills: ["GitHub", "Git"],
+			description: "Coursera. Gained a strong foundation in Python programming.",
+			skills: ["Python", "Data Science"],
 		},
 	];
 

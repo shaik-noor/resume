@@ -29,7 +29,8 @@ export default function AboutPage() {
 						"@type": "Person",
 						name: "Shaik Noor Mohammad",
 						url: "https://resume.noruj.com/about",
-						jobTitle: "Cloud Data & Integration Engineer",
+						jobTitle:
+							"Informatica PowerCenter Developer & Cloud Data Integration Engineer",
 						worksFor: { "@type": "Organization", name: "Informatica" },
 						sameAs: [
 							"https://www.linkedin.com/in/shaik-noor/",
@@ -56,8 +57,8 @@ export default function AboutPage() {
 						<h1 className="mt-4 text-xl md:text-2xl font-semibold text-center">
 							Shaik Noor Mohammad
 						</h1>
-						<Badge variant="secondary" className="mt-2 text-xs">
-							Cloud Data & Integration Engineer
+						<Badge variant="secondary" className="mt-2 text-xs text-center">
+							Informatica PowerCenter Developer & Cloud Data Integration Engineer
 						</Badge>
 						<div className="mt-4 w-full flex flex-wrap gap-2 justify-center">
 							<Link href="/resume">
@@ -75,47 +76,29 @@ export default function AboutPage() {
 				<div className="space-y-6">
 					<div className="space-y-3 text-muted-foreground">
 						<p>
-							I’m a{" "}
-							<strong className="font-semibold">
-								Cloud Data & Integration Engineer
-							</strong>{" "}
-							with
-							<strong className="font-semibold"> 6+ years</strong> of experience
-							supporting and troubleshooting
-							<strong className="font-semibold">
-								{" "}
-								Informatica PowerCenter
-							</strong>{" "}
-							and
-							<strong className="font-semibold"> IDMC</strong> in a product
-							engineering environment.
+							Informatica PowerCenter Developer & Cloud Data / Integration
+							Engineer with <strong className="font-semibold">6+ years</strong>{" "}
+							of experience in designing, troubleshooting, and optimizing ETL
+							workflows across on-prem and cloud-connected environments. Strong
+							hands-on exposure to Informatica PowerCenter versions 10.4 -
+							10.5.9 (including 10.5.4), IDMC (IICS), SQL, and Unix/Linux shell
+							scripting.
 						</p>
 						<p>
-							I specialize in{" "}
+							Specialized in analyzing session/workflow logs,{" "}
+							<strong className="font-semibold">debugging complex mappings</strong>,
+							and working with product and R&D teams to stabilize large-scale
+							ETL pipelines. Experienced in{" "}
 							<strong className="font-semibold">
-								debugging complex ETL issues
+								performance tuning, data quality validation
 							</strong>
-							, analyzing
-							<strong className="font-semibold"> logs and stack traces</strong>,
-							and partnering with product and R&D teams to stabilize{" "}
+							, and supporting production environments with tight SLAs.
+							Currently upskilling in{" "}
+							<strong className="font-semibold">IDMC administration</strong> and{" "}
 							<strong className="font-semibold">
-								mission-critical data pipelines
-							</strong>
-							. Recently, I’ve been expanding into{" "}
-							<strong className="font-semibold">IDMC administration</strong>,
-							<strong className="font-semibold"> cloud data integration</strong>
-							, and
-							<strong className="font-semibold">
-								{" "}
 								PowerCenter-to-cloud migration
-							</strong>{" "}
-							using internal Informatica training.
-						</p>
-						<p>
-							Outside work, I build{" "}
-							<strong className="font-semibold">Noruj.com</strong>, an
-							interactive learning and documentation platform focused on
-							practical software engineering, data, and developer tools.
+							</strong>
+							.
 						</p>
 					</div>
 					<div className="grid gap-3 sm:grid-cols-3">
@@ -135,7 +118,7 @@ export default function AboutPage() {
 							</CardContent>
 						</Card>
 						<Card>
-							<CardContent >
+							<CardContent>
 								<span className="text-xs text-muted-foreground">Company</span>
 								<p className="mt-2 text-xl font-semibold tracking-tight">
 									Informatica
@@ -155,50 +138,32 @@ export default function AboutPage() {
 			</div>
 
 			<div className="grid gap-6">
-				{/* Focus areas */}
+				{/* Key Achievements */}
 				<Card>
 					<CardHeader className="border-b">
-						<CardTitle>Focus Areas</CardTitle>
-						<CardDescription>Where I deliver impact</CardDescription>
+						<CardTitle>Key Achievements</CardTitle>
+						<CardDescription>Impact delivered</CardDescription>
 					</CardHeader>
 					<CardContent>
 						<ul className="mt-2 text-sm list-disc pl-5 space-y-1">
 							<li>
-								<strong className="font-semibold">
-									PowerCenter &amp; IDMC product support
-								</strong>
+								Resolved <strong className="font-semibold">~95%</strong> of
+								client issues within 24 hours, significantly reducing
+								escalations and improving customer satisfaction.
 							</li>
 							<li>
+								Increased workflow efficiency by introducing{" "}
 								<strong className="font-semibold">
-									Technical assistance and troubleshooting
-								</strong>
+									AI-assisted and scripted automations
+								</strong>{" "}
+								for repeated troubleshooting and operational tasks.
 							</li>
 							<li>
-								<strong className="font-semibold">
-									Issue triage and resolution
-								</strong>
-							</li>
-							<li>
-								<strong className="font-semibold">
-									Cross-functional collaboration
-								</strong>
+								Provided <strong className="font-semibold">technical mentoring</strong>{" "}
+								to junior engineers, sharing best practices on debugging, log
+								analysis, and stable ETL operations.
 							</li>
 						</ul>
-					</CardContent>
-				</Card>
-
-				{/* Current role */}
-				<Card>
-					<CardHeader className="border-b">
-						<CardTitle>Current Role</CardTitle>
-						<CardDescription>Informatica - Support Engineering</CardDescription>
-					</CardHeader>
-					<CardContent>
-						<p className="text-sm text-muted-foreground">
-							Delivering scalable support solutions and partnering with
-							engineering teams to improve product reliability and customer
-							outcomes.
-						</p>
 					</CardContent>
 				</Card>
 			</div>
@@ -211,15 +176,15 @@ export default function AboutPage() {
 				<CardContent>
 					<div className="flex flex-wrap gap-2">
 						{[
-							"PowerCenter",
-							"IDMC",
-							"Cloud ETL",
-							"SQL",
-							"Python",
-							"JavaScript",
-							"PostgreSQL",
+							"Informatica PowerCenter",
+							"Informatica IDMC / IICS",
+							"SQL (Oracle, SQL Server, PostgreSQL)",
+							"Unix/Linux Shell Scripting",
+							"Apache NiFi",
+							"Pentaho (PDI)",
+							"Apache Airflow",
 							"Docker",
-							"GitHub",
+							"Git",
 						].map((t) => (
 							<Badge key={t} variant="secondary" className="px-3 py-1">
 								{t}
@@ -231,29 +196,26 @@ export default function AboutPage() {
 
 			<Card>
 				<CardHeader className="border-b">
-					<CardTitle>Project</CardTitle>
+					<CardTitle>Projects</CardTitle>
 					<CardDescription>
-						Noruj.com - Interactive Knowledge & Workflow Platform
+						Noruj.com – Interactive Knowledge & Documentation Platform
 					</CardDescription>
 				</CardHeader>
 				<CardContent>
 					<p className="text-sm text-muted-foreground">
-						Personal SaaS project built to organize knowledge using visual
-						workflows and rich documents.
+						Built noruj.com, a learner-first documentation platform designed to
+						make complex technical topics easier to find, read, and trust.
 					</p>
 					<ul className="mt-2 list-disc pl-5 space-y-1 text-sm">
 						<li>
-							Designed and built features for visual workflows, document
-							management, and collaboration (public and private documents,
-							sharing, and search).
+							Implemented features for visual workflows, rich documents, and
+							structured knowledge organization, inspired by modern knowledge
+							management tools.
 						</li>
 						<li>
-							Worked end-to-end across front-end, back-end, and deployment,
-							strengthening skills in JavaScript, databases, and cloud concepts.
-						</li>
-						<li>
-							Focused on secure, structured knowledge storage, including privacy
-							controls and scalable architecture.
+							Used the project to deepen skills in web development, databases,
+							and basic cloud concepts, and to experiment with product design
+							and user experience.
 						</li>
 					</ul>
 				</CardContent>

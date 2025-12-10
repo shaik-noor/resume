@@ -6,18 +6,18 @@ export const metadata = {
 export default function EducationsPage() {
 	const schools = [
 		{
-			school: "Zero To Mastery Academy",
-			degree: "Computer Programming",
-			period: "2022",
+			school: "Zero To Mastery Academy - Online",
+			degree: "Complete Web Developer, Computer Programming",
+			period: "2023",
 			details:
-				"Learned JavaScript, Python, full stack development, cloud computing, production application deployment, database management, version control, and more.",
+				"Comprehensive training in modern web development, including full-stack skills, databases, and deployment.",
 		},
 		{
-			school: "Sri Krishnadevaraya University",
-			degree: "Bachelor of Commerce (B.Com)",
-			period: "2014 – 2017",
+			school: "Sri Krishnadevaraya University - Andhra Pradesh",
+			degree: "Bachelor of Commerce",
+			period: "2017",
 			details:
-				"Focused on accounting, finance, and business management principles. Developed strong analytical and problem-solving skills essential for business operations.",
+				"Foundation in commerce and business principles. Developed analytical and organizational skills.",
 		},
 	];
 

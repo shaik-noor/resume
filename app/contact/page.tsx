@@ -18,20 +18,33 @@ export default function ContactPage() {
 
 			<div className="grid gap-6 md:grid-cols-2">
 				<div className="rounded-lg border p-4">
-					<h2 className="text-sm font-semibold">Direct</h2>
-					<ul className="mt-2 text-sm space-y-1">
+					<h2 className="text-sm font-semibold">Contact Details</h2>
+					<ul className="mt-3 text-sm space-y-2">
 						<li>
-							Email:{" "}
-							<Link href="mailto:s.noorink@gmail.com" className="text-primary">
+							<span className="font-medium">Email:</span>{" "}
+							<Link href="mailto:s.noorink@gmail.com" className="text-primary hover:underline">
 								s.noorink@gmail.com
 							</Link>
 						</li>
 						<li>
-							LinkedIn:{" "}
+							<span className="font-medium">Phone:</span>{" "}
+							<Link href="tel:+917799477206" className="text-primary hover:underline">
+								+91-7799477206
+							</Link>
+							,{" "}
+							<Link href="tel:+919398627571" className="text-primary hover:underline">
+								+91-9398627571
+							</Link>
+						</li>
+						<li>
+							<span className="font-medium">Location:</span> Bangalore, India
+						</li>
+						<li>
+							<span className="font-medium">LinkedIn:</span>{" "}
 							<Link
 								href="https://www.linkedin.com/in/shaik-noor/"
 								target="_blank"
-								className="text-primary"
+								className="text-primary hover:underline"
 							>
 								/shaik-noor
 							</Link>

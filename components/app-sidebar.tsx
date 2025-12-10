@@ -77,8 +77,8 @@ export function AppSidebar() {
 								</Link>
 							</TooltipTrigger>
 							<TooltipContent side="right" align="center">
-								Shaik Noor Mohammad — Cloud Data & Integration Engineer
-								(PowerCenter & IDMC)
+								Shaik Noor Mohammad — Informatica PowerCenter & Cloud Data
+								Integration Engineer
 							</TooltipContent>
 						</Tooltip>
 					</div>
@@ -92,7 +92,7 @@ export function AppSidebar() {
 								Shaik Noor Mohammad
 							</span>
 							<span className="truncate text-xs text-muted-foreground">
-								Cloud Data & Integration Engineer (PowerCenter & IDMC)
+								Informatica PowerCenter & Cloud Data Integration Engineer
 							</span>
 						</div>
 					</div>
@@ -138,7 +138,7 @@ export function AppSidebar() {
 				<SidebarFooter>
 					<div className="px-3 py-2 text-xs text-muted-foreground">
 						<p className="mb-1">
-							PowerCenter · IDMC · Cloud ETL · SQL · Python
+							PowerCenter · IDMC · Cloud ETL · SQL · Unix/Linux
 						</p>
 						<Badge variant="secondary" className="text-[10px]">
 							Open to opportunities
