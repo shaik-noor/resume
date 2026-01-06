@@ -204,21 +204,21 @@ export default function WorkExperiencePage() {
 				</FadeIn>
 			</StaggerContainer>
 
-			<StaggerContainer className="relative border-l-2 border-border/50 ml-3 md:ml-6 space-y-12 pb-12">
+			<StaggerContainer className="relative md:border-l-2 border-border/50 md:ml-6 space-y-8 md:space-y-12 pb-12">
 				{roles.map((role, index) => (
 					<FadeIn
 						key={`${role.company}-${role.title}`}
 						delay={0.1 * index}
-						className="relative pl-8 md:pl-12"
+						className="relative md:pl-12"
 					>
 						{/* Timeline Dot */}
-						<div className="absolute -left-[5px] md:-left-[5px] top-6 h-3 w-3 rounded-full border-2 border-primary bg-background ring-4 ring-background" />
+						<div className="absolute -left-[5px] md:-left-[5px] top-6 h-3 w-3 rounded-full border-2 border-primary bg-background ring-4 ring-background hidden md:block" />
 
 						<Card className="group overflow-hidden border-border/60 bg-card/50 shadow-sm hover:bg-card hover:shadow-md hover:border-primary/20 transition-all duration-300">
-							<CardHeader className="pb-3 pt-5 px-5 md:px-6">
+							<CardHeader className="pb-3 pt-4 px-4 md:pt-5 md:px-6">
 								<div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
-									<div className="flex items-start gap-4">
-										<div className="relative shrink-0 h-14 w-14 rounded-lg overflow-hidden border border-border shadow-sm group-hover:scale-105 transition-transform duration-300">
+									<div className="flex items-start gap-3 md:gap-4">
+										<div className="relative shrink-0 h-12 w-12 md:h-14 md:w-14 rounded-lg overflow-hidden border border-border shadow-sm group-hover:scale-105 transition-transform duration-300">
 											<Image
 												src={role.logo}
 												alt={`${role.company} logo`}
@@ -226,38 +226,38 @@ export default function WorkExperiencePage() {
 												className="object-contain p-1 bg-white"
 											/>
 										</div>
-										<div className="space-y-1.5">
-											<CardTitle className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+										<div className="space-y-1">
+											<CardTitle className="text-lg md:text-xl font-bold text-foreground group-hover:text-primary transition-colors">
 												{role.title}
 											</CardTitle>
-											<div className="text-base font-semibold text-muted-foreground flex items-center gap-2">
-												<BriefcaseIcon className="w-4 h-4" />
+											<div className="text-sm md:text-base font-semibold text-muted-foreground flex items-center gap-2">
+												<BriefcaseIcon className="w-3.5 h-3.5 md:w-4 md:h-4" />
 												{role.company}
 											</div>
 										</div>
 									</div>
 									<Badge
 										variant="secondary"
-										className="w-fit flex items-center gap-1.5 px-3 py-1 text-sm font-medium bg-secondary/50"
+										className="w-fit flex items-center gap-1.5 px-2.5 py-0.5 md:px-3 md:py-1 text-xs md:text-sm font-medium bg-secondary/50"
 									>
-										<CalendarIcon className="w-3.5 h-3.5" />
+										<CalendarIcon className="w-3 h-3 md:w-3.5 md:h-3.5" />
 										{role.period}
 									</Badge>
 								</div>
 							</CardHeader>
 
-							<CardContent className="px-5 md:px-6 pb-6 space-y-4">
-								<p className="text-base text-muted-foreground leading-relaxed">
+							<CardContent className="px-4 pb-4 md:px-6 md:pb-6 space-y-4">
+								<p className="text-sm md:text-base text-muted-foreground leading-relaxed">
 									{role.summary}
 								</p>
 
 								{/* Highlights Section */}
-								<div className="space-y-3 pt-2">
-									<h4 className="text-sm font-semibold tracking-wide uppercase text-muted-foreground/80 flex items-center gap-2">
-										<CheckCircle2 className="w-4 h-4 text-primary" />
+								<div className="space-y-2 md:space-y-3 pt-2">
+									<h4 className="text-xs md:text-sm font-semibold tracking-wide uppercase text-muted-foreground/80 flex items-center gap-2">
+										<CheckCircle2 className="w-3.5 h-3.5 md:w-4 md:h-4 text-primary" />
 										Key Highlights
 									</h4>
-									<ul className="space-y-3">
+									<ul className="space-y-2 md:space-y-3">
 										{role.highlights.map((h) => (
 											<li
 												key={h.id}
