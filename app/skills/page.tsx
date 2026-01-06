@@ -1,9 +1,21 @@
+import {
+	Database,
+	type LucideIcon,
+	Server,
+	Settings2,
+	Terminal,
+	Users,
+} from "lucide-react";
+import Image from "next/image";
+import { Card, CardContent } from "@/components/ui/card";
+import { FadeIn, StaggerContainer } from "@/components/ui/motion-wrapper";
+
 export const metadata = {
 	title: "Skills - Shaik Noor",
+	description: "Technical skills and expertise of Shaik Noor Mohammad",
 	alternates: { canonical: "/skills" },
 };
 
-import Image from "next/image";
 type Skill = {
 	name: string;
 	image: string;
@@ -119,47 +131,105 @@ const waysOfWorking: Skill[] = [
 	},
 ];
 
-function SkillsGrid({ title, items }: { title: string; items: Skill[] }) {
+function SkillsSection({
+	title,
+	icon: Icon,
+	items,
+	delayOffset = 0,
+}: {
+	title: string;
+	icon: LucideIcon;
+	items: Skill[];
+	delayOffset?: number;
+}) {
 	return (
-		<div className="space-y-3">
-			<h2 className="text-sm font-semibold">{title}</h2>
-			<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-				{items.map((s) => (
-					<div
-						key={s.name}
-						className="rounded-lg border p-3 flex items-center gap-3"
-					>
-						<Image
-							src={s.image}
-							alt={s.name}
-							width={32}
-							height={32}
-							unoptimized
-							className="size-8 object-contain"
-						/>
-						<span className="text-sm">{s.name}</span>
+		<div className="space-y-4">
+			<FadeIn delay={delayOffset}>
+				<h2 className="text-xl font-semibold flex items-center gap-2 text-foreground/90">
+					<div className="p-1.5 rounded-md bg-primary/10 text-primary">
+						<Icon className="w-5 h-5" />
 					</div>
+					{title}
+				</h2>
+			</FadeIn>
+			<StaggerContainer
+				delay={delayOffset + 0.1}
+				className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4"
+			>
+				{items.map((s, i) => (
+					<FadeIn key={s.name} delay={delayOffset + 0.1 + i * 0.05}>
+						<Card className="h-full border-border/50 bg-card/50 hover:bg-card hover:border-primary/30 hover:shadow-md transition-all duration-300 group cursor-default">
+							<CardContent className="p-4 flex flex-col items-center justify-center text-center gap-3 h-full">
+								<div className="relative h-12 w-12 p-2 rounded-lg bg-white/5 group-hover:bg-white/10 transition-colors">
+									<Image
+										src={s.image}
+										alt={s.name}
+										fill
+										className="object-contain p-0.5"
+										unoptimized
+									/>
+								</div>
+								<span className="text-sm font-medium text-muted-foreground group-hover:text-foreground transition-colors line-clamp-2">
+									{s.name}
+								</span>
+							</CardContent>
+						</Card>
+					</FadeIn>
 				))}
-			</div>
+			</StaggerContainer>
 		</div>
 	);
 }
 
 export default function SkillsPage() {
 	return (
-		<section className="mx-auto max-w-5xl space-y-8">
-			<header>
-				<h1 className="text-2xl md:text-3xl font-bold">Skills</h1>
-				<p className="text-sm text-muted-foreground">
-					Core competencies, tools, and methodologies.
-				</p>
-			</header>
+		<section className="mx-auto max-w-6xl space-y-10 py-8 px-4 sm:px-6">
+			{/* Header */}
+			<StaggerContainer className="space-y-2 text-center md:text-left">
+				<FadeIn>
+					<h1 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">
+						Skills & Technologies
+					</h1>
+				</FadeIn>
+				<FadeIn>
+					<p className="text-muted-foreground text-lg max-w-2xl">
+						A comprehensive overview of my technical expertise, ranging from ETL
+						pipelines to modern web development.
+					</p>
+				</FadeIn>
+			</StaggerContainer>
 
-			<SkillsGrid title="Informatica & ETL" items={informaticaEtl} />
-			<SkillsGrid title="Databases & SQL" items={databasesSql} />
-			<SkillsGrid title="Unix/Linux & Automation" items={unixLinuxAutomation} />
-			<SkillsGrid title="Data Platforms & Tools" items={dataPlatformsTools} />
-			<SkillsGrid title="Ways of Working" items={waysOfWorking} />
+			<div className="space-y-12">
+				<SkillsSection
+					title="Informatica & ETL"
+					icon={Settings2}
+					items={informaticaEtl}
+				/>
+				<SkillsSection
+					title="Databases & SQL"
+					icon={Database}
+					items={databasesSql}
+					delayOffset={0.1}
+				/>
+				<SkillsSection
+					title="Unix/Linux & Automation"
+					icon={Terminal}
+					items={unixLinuxAutomation}
+					delayOffset={0.2}
+				/>
+				<SkillsSection
+					title="Data Platforms & Tools"
+					icon={Server}
+					items={dataPlatformsTools}
+					delayOffset={0.3}
+				/>
+				<SkillsSection
+					title="Ways of Working"
+					icon={Users}
+					items={waysOfWorking}
+					delayOffset={0.4}
+				/>
+			</div>
 		</section>
 	);
 }

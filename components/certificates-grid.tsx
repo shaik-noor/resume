@@ -1,173 +1,197 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Image from "next/image"
+import { Award, ExternalLink, FileCheck } from "lucide-react";
+import Image from "next/image";
+import { useState } from "react";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogDescription,
-} from "@/components/ui/dialog"
+	Dialog,
+	DialogContent,
+	DialogDescription,
+	DialogHeader,
+	DialogTitle,
+} from "@/components/ui/dialog";
+import { FadeIn, StaggerContainer } from "@/components/ui/motion-wrapper";
 
 type Certificate = {
-  title: string
-  image: string
-  link?: string
-  description: string
-  skills: string[]
+	title: string;
+	image: string;
+	link?: string;
+	description: string;
+	skills: string[];
+};
+
+function CertificateCard({
+	cert,
+	onClick,
+}: {
+	cert: Certificate;
+	onClick: () => void;
+}) {
+	return (
+		<Card
+			className="group cursor-pointer overflow-hidden border-border/60 bg-card/50 hover:bg-card hover:border-primary/50 hover:shadow-lg transition-all duration-300 h-full flex flex-col"
+			onClick={onClick}
+		>
+			<div className="aspect-video w-full bg-muted/50 relative overflow-hidden">
+				<Image
+					src={cert.image}
+					alt={cert.title}
+					fill
+					unoptimized
+					className="object-cover transition-transform duration-500 group-hover:scale-105"
+				/>
+				<div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+					<span className="text-white font-medium text-sm px-3 py-1.5 rounded-full bg-white/20 backdrop-blur-sm border border-white/30">
+						View Details
+					</span>
+				</div>
+			</div>
+			<CardContent className="p-4 flex-1 flex flex-col gap-3">
+				<h3 className="text-base font-semibold leading-tight group-hover:text-primary transition-colors">
+					{cert.title}
+				</h3>
+				<p className="text-xs text-muted-foreground line-clamp-2">
+					{cert.description}
+				</p>
+				<div className="mt-auto flex flex-wrap gap-1.5 pt-2">
+					{cert.skills.slice(0, 3).map((s) => (
+						<Badge
+							key={s}
+							variant="secondary"
+							className="text-[10px] px-1.5 py-0 h-5 bg-secondary/50 group-hover:bg-secondary transition-colors"
+						>
+							{s}
+						</Badge>
+					))}
+					{cert.skills.length > 3 && (
+						<span className="text-[10px] text-muted-foreground self-center">
+							+{cert.skills.length - 3}
+						</span>
+					)}
+				</div>
+			</CardContent>
+		</Card>
+	);
 }
 
 export default function CertificatesGrid({
-  informaticaCertificates,
-  otherCertificates,
+	informaticaCertificates,
+	otherCertificates,
 }: {
-  informaticaCertificates: Certificate[]
-  otherCertificates: Certificate[]
+	informaticaCertificates: Certificate[];
+	otherCertificates: Certificate[];
 }) {
-  const [open, setOpen] = useState(false)
-  const [selected, setSelected] = useState<Certificate | null>(null)
+	const [open, setOpen] = useState(false);
+	const [selected, setSelected] = useState<Certificate | null>(null);
 
-  function onCardClick(c: Certificate) {
-    setSelected(c)
-    setOpen(true)
-  }
+	function onCardClick(c: Certificate) {
+		setSelected(c);
+		setOpen(true);
+	}
 
-  return (
-    <>
-      {/* Informatica */}
-      <div className="space-y-4">
-        <h2 className="text-lg font-semibold">Informatica Certificates</h2>
-        <div className="grid gap-4 sm:grid-cols-2">
-          {informaticaCertificates.map((c) => (
-            <div
-              key={c.title}
-              className="rounded-lg border p-0 overflow-hidden cursor-pointer"
-              role="button"
-              tabIndex={0}
-              onClick={() => onCardClick(c)}
-            >
-              <div className="aspect-video w-full bg-muted relative">
-                <Image
-                  src={c.image}
-                  alt={c.title}
-                  fill
-                  unoptimized
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-4 space-y-2">
-                <h3 className="text-sm font-semibold">{c.title}</h3>
-                <p className="text-xs text-muted-foreground">{c.description}</p>
-                <div className="flex flex-wrap gap-1.5 pt-2">
-                  {c.skills.map((s) => (
-                    <span
-                      key={s}
-                      className="inline-flex items-center rounded-full border px-2 py-0.5 text-[11px]"
-                    >
-                      {s}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+	return (
+		<>
+			<div className="space-y-12">
+				{/* Informatica Section */}
+				<section className="space-y-4">
+					<FadeIn>
+						<h2 className="text-xl font-semibold flex items-center gap-2">
+							<div className="p-1.5 rounded-md bg-primary/10 text-primary">
+								<Award className="w-5 h-5" />
+							</div>
+							Informatica Certifications
+						</h2>
+					</FadeIn>
+					<StaggerContainer className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+						{informaticaCertificates.map((c, i) => (
+							<FadeIn key={c.title} delay={i * 0.1}>
+								<CertificateCard cert={c} onClick={() => onCardClick(c)} />
+							</FadeIn>
+						))}
+					</StaggerContainer>
+				</section>
 
-      {/* Other */}
-      <div className="space-y-4">
-        <h2 className="text-lg font-semibold">Other Certificates</h2>
-        <div className="grid gap-4 sm:grid-cols-2">
-          {otherCertificates.map((c) => (
-            <div
-              key={c.title}
-              className="rounded-lg border p-0 overflow-hidden cursor-pointer"
-              role="button"
-              tabIndex={0}
-              onClick={() => onCardClick(c)}
-            >
-              <div className="aspect-video w-full bg-muted relative">
-                <Image
-                  src={c.image}
-                  alt={c.title}
-                  fill
-                  unoptimized
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-4 space-y-2">
-                <h3 className="text-sm font-semibold">{c.title}</h3>
-                <p className="text-xs text-muted-foreground">{c.description}</p>
-                <div className="flex flex-wrap gap-1.5 pt-2">
-                  {c.skills.map((s) => (
-                    <span
-                      key={s}
-                      className="inline-flex items-center rounded-full border px-2 py-0.5 text-[11px]"
-                    >
-                      {s}
-                    </span>
-                  ))}
-                </div>
-                {c.link && (
-                  <div className="pt-3">
-                    <a
-                      className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md border bg-background text-sm font-medium transition-all hover:bg-accent hover:text-accent-foreground h-8 px-3"
-                      href={c.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      View certificate
-                    </a>
-                  </div>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+				{/* Other Section */}
+				<section className="space-y-4">
+					<FadeIn>
+						<h2 className="text-xl font-semibold flex items-center gap-2">
+							<div className="p-1.5 rounded-md bg-primary/10 text-primary">
+								<FileCheck className="w-5 h-5" />
+							</div>
+							Other Certifications
+						</h2>
+					</FadeIn>
+					<StaggerContainer className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+						{otherCertificates.map((c, i) => (
+							<FadeIn key={c.title} delay={i * 0.1}>
+								<CertificateCard cert={c} onClick={() => onCardClick(c)} />
+							</FadeIn>
+						))}
+					</StaggerContainer>
+				</section>
+			</div>
 
-      <Dialog
-        open={open}
-        onOpenChange={(o) => {
-          setOpen(o)
-          if (!o) setSelected(null)
-        }}
-      >
-        <DialogContent className="sm:max-w-3xl p-0">
-          {selected && (
-            <>
-              <DialogHeader className="p-6 pb-0">
-                <DialogTitle>{selected.title}</DialogTitle>
-                <DialogDescription>{selected.description}</DialogDescription>
-              </DialogHeader>
-              <div className="aspect-video w-full relative">
-                <Image
-                  src={selected.image}
-                  alt={selected.title}
-                  fill
-                  unoptimized
-                  className="object-contain bg-muted"
-                />
-              </div>
-              {selected.link && (
-                <div className="p-6 pt-4">
-                  <a
-                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md border bg-background text-sm font-medium transition-all hover:bg-accent hover:text-accent-foreground h-9 px-4"
-                    href={selected.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Open external certificate
-                  </a>
-                </div>
-              )}
-            </>
-          )}
-        </DialogContent>
-      </Dialog>
-    </>
-  )
+			{/* Detailed View Modal */}
+			<Dialog
+				open={open}
+				onOpenChange={(o) => {
+					setOpen(o);
+					if (!o) setTimeout(() => setSelected(null), 300); // Clear after animation
+				}}
+			>
+				<DialogContent className="sm:max-w-3xl p-0 overflow-hidden border-none shadow-2xl bg-card">
+					{selected && (
+						<div className="flex flex-col">
+							<div className="aspect-video w-full relative bg-muted/30">
+								<Image
+									src={selected.image}
+									alt={selected.title}
+									fill
+									unoptimized
+									className="object-contain p-4"
+								/>
+							</div>
+
+							<div className="p-6 space-y-4">
+								<DialogHeader>
+									<DialogTitle className="text-xl md:text-2xl font-bold">
+										{selected.title}
+									</DialogTitle>
+									<div className="flex flex-wrap gap-2 pt-2">
+										{selected.skills.map((s) => (
+											<Badge key={s} variant="outline" className="text-xs">
+												{s}
+											</Badge>
+										))}
+									</div>
+								</DialogHeader>
+
+								<DialogDescription className="text-base text-foreground/80 leading-relaxed">
+									{selected.description}
+								</DialogDescription>
+
+								{selected.link && (
+									<div className="pt-2 flex justify-end">
+										<Button asChild>
+											<a
+												href={selected.link}
+												target="_blank"
+												rel="noopener noreferrer"
+												className="gap-2"
+											>
+												Verify Certificate <ExternalLink className="w-4 h-4" />
+											</a>
+										</Button>
+									</div>
+								)}
+							</div>
+						</div>
+					)}
+				</DialogContent>
+			</Dialog>
+		</>
+	);
 }
-

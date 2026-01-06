@@ -1,9 +1,15 @@
+import { BriefcaseIcon, CalendarIcon, CheckCircle2 } from "lucide-react";
+import Image from "next/image";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { FadeIn, StaggerContainer } from "@/components/ui/motion-wrapper";
+
 export const metadata = {
 	title: "Work Experience - Shaik Noor",
+	description: "Professional career journey of Shaik Noor Mohammad",
 	alternates: { canonical: "/work-experience" },
 };
 
-import Image from "next/image";
 export default function WorkExperiencePage() {
 	const roles = [
 		{
@@ -18,7 +24,12 @@ export default function WorkExperiencePage() {
 					id: "se-1",
 					content: (
 						<>
-							Provide <strong className="font-semibold">L2/L3 technical support</strong> for Informatica PowerCenter (10.4–10.5.9, including 10.5.4) and IDMC (IICS) for global enterprise customers.
+							Provide{" "}
+							<strong className="font-semibold text-primary">
+								L2/L3 technical support
+							</strong>{" "}
+							for Informatica PowerCenter (10.4–10.5.9, including 10.5.4) and
+							IDMC (IICS) for global enterprise customers.
 						</>
 					),
 				},
@@ -26,7 +37,12 @@ export default function WorkExperiencePage() {
 					id: "se-2",
 					content: (
 						<>
-							Analyze <strong className="font-semibold">session logs, workflow logs, stack traces</strong>, and system configurations to identify root causes of ETL failures and performance issues.
+							Analyze{" "}
+							<strong className="font-semibold text-primary">
+								session logs, workflow logs, stack traces
+							</strong>
+							, and system configurations to identify root causes of ETL
+							failures and performance issues.
 						</>
 					),
 				},
@@ -34,7 +50,12 @@ export default function WorkExperiencePage() {
 					id: "se-3",
 					content: (
 						<>
-							Work with customer development teams to <strong className="font-semibold">debug and validate mappings, sessions, and workflows</strong>, including parameterization, connection objects, and session properties.
+							Work with customer development teams to{" "}
+							<strong className="font-semibold text-primary">
+								debug and validate mappings, sessions, and workflows
+							</strong>
+							, including parameterization, connection objects, and session
+							properties.
 						</>
 					),
 				},
@@ -42,7 +63,12 @@ export default function WorkExperiencePage() {
 					id: "se-4",
 					content: (
 						<>
-							Collaborate closely with Product Specialists and R&D to <strong className="font-semibold">triage product defects, validate fixes</strong>, and drive Emergency Bug Fix (EBF) implementations with minimal downtime.
+							Collaborate closely with Product Specialists and R&D to{" "}
+							<strong className="font-semibold text-primary">
+								triage product defects, validate fixes
+							</strong>
+							, and drive Emergency Bug Fix (EBF) implementations with minimal
+							downtime.
 						</>
 					),
 				},
@@ -50,7 +76,12 @@ export default function WorkExperiencePage() {
 					id: "se-5",
 					content: (
 						<>
-							Assist customers during <strong className="font-semibold">upgrades and migration scenarios</strong> (PowerCenter to higher versions / IDMC), including regression analysis of critical ETL jobs.
+							Assist customers during{" "}
+							<strong className="font-semibold text-primary">
+								upgrades and migration scenarios
+							</strong>{" "}
+							(PowerCenter to higher versions / IDMC), including regression
+							analysis of critical ETL jobs.
 						</>
 					),
 				},
@@ -58,7 +89,12 @@ export default function WorkExperiencePage() {
 					id: "se-6",
 					content: (
 						<>
-							Create and improve <strong className="font-semibold">runbooks, troubleshooting playbooks, and KB articles</strong> for recurring ETL and platform issues, accelerating resolution time and knowledge reuse.
+							Create and improve{" "}
+							<strong className="font-semibold text-primary">
+								runbooks, troubleshooting playbooks, and KB articles
+							</strong>{" "}
+							for recurring ETL and platform issues, accelerating resolution
+							time and knowledge reuse.
 						</>
 					),
 				},
@@ -66,7 +102,15 @@ export default function WorkExperiencePage() {
 					id: "se-7",
 					content: (
 						<>
-							Currently completing internal training on: <strong className="font-semibold">IDMC: Administration Fundamentals</strong> and <strong className="font-semibold">PowerCenter to Informatica Cloud – Migration Training</strong>.
+							Currently completing internal training on:{" "}
+							<strong className="font-semibold text-primary">
+								IDMC: Administration Fundamentals
+							</strong>{" "}
+							and{" "}
+							<strong className="font-semibold text-primary">
+								PowerCenter to Informatica Cloud – Migration Training
+							</strong>
+							.
 						</>
 					),
 				},
@@ -84,7 +128,12 @@ export default function WorkExperiencePage() {
 					id: "tse-1",
 					content: (
 						<>
-							Served as a key technical contact for global customers using <strong className="font-semibold">Informatica Data as a Service (DaaS)</strong>, helping validate and verify postal addresses, email IDs, and phone numbers at scale.
+							Served as a key technical contact for global customers using{" "}
+							<strong className="font-semibold text-primary">
+								Informatica Data as a Service (DaaS)
+							</strong>
+							, helping validate and verify postal addresses, email IDs, and
+							phone numbers at scale.
 						</>
 					),
 				},
@@ -92,7 +141,11 @@ export default function WorkExperiencePage() {
 					id: "tse-2",
 					content: (
 						<>
-							Documented <strong className="font-semibold">recurring issues, troubleshooting steps, and best practices</strong> to help onboard new team members and improve support consistency.
+							Documented{" "}
+							<strong className="font-semibold text-primary">
+								recurring issues, troubleshooting steps, and best practices
+							</strong>{" "}
+							to help onboard new team members and improve support consistency.
 						</>
 					),
 				},
@@ -110,7 +163,12 @@ export default function WorkExperiencePage() {
 					id: "f1-1",
 					content: (
 						<>
-							Led <strong className="font-semibold">technical training sessions</strong> and supported the refurbishing of electronic devices for Flipkart’s refurbish program.
+							Led{" "}
+							<strong className="font-semibold text-primary">
+								technical training sessions
+							</strong>{" "}
+							and supported the refurbishing of electronic devices for
+							Flipkart’s refurbish program.
 						</>
 					),
 				},
@@ -118,7 +176,12 @@ export default function WorkExperiencePage() {
 					id: "f1-2",
 					content: (
 						<>
-							Optimized repair workflows and introduced <strong className="font-semibold">process improvements</strong> that reduced turnaround time by ~25% while maintaining quality and reliability.
+							Optimized repair workflows and introduced{" "}
+							<strong className="font-semibold text-primary">
+								process improvements
+							</strong>{" "}
+							that reduced turnaround time by ~25% while maintaining quality and
+							reliability.
 						</>
 					),
 				},
@@ -127,68 +190,89 @@ export default function WorkExperiencePage() {
 	];
 
 	return (
-		<section className="mx-auto max-w-4xl space-y-6">
-			<header>
-				<h1 className="text-2xl md:text-3xl font-bold">Work Experience</h1>
-				<p className="text-sm text-muted-foreground">
-					Key roles, responsibilities, and achievements.
-				</p>
-			</header>
+		<section className="mx-auto max-w-4xl space-y-8 py-8 px-4 sm:px-6">
+			<StaggerContainer className="space-y-2 text-center md:text-left">
+				<FadeIn>
+					<h1 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">
+						Work Experience
+					</h1>
+				</FadeIn>
+				<FadeIn>
+					<p className="text-muted-foreground text-lg">
+						A timeline of my professional journey and key achievements.
+					</p>
+				</FadeIn>
+			</StaggerContainer>
 
-			<div className="space-y-4">
-				{roles.map((role) => (
-					<article
+			<StaggerContainer className="relative border-l-2 border-border/50 ml-3 md:ml-6 space-y-12 pb-12">
+				{roles.map((role, index) => (
+					<FadeIn
 						key={`${role.company}-${role.title}`}
-						className="rounded-lg border p-4 transition hover:bg-accent/40"
+						delay={0.1 * index}
+						className="relative pl-8 md:pl-12"
 					>
-						<div className="flex gap-4">
-							<div className="shrink-0">
-								<Image
-									src={role.logo}
-									alt={`${role.company} logo`}
-									width={48}
-									height={48}
-									unoptimized
-									className="rounded object-contain border"
-								/>
-							</div>
-							<div className="flex-1">
-								<h2 className="text-base md:text-lg font-semibold">
-									{role.title}{" "}
-									<span className="text-muted-foreground">
-										· {role.company}
-									</span>
-								</h2>
-								<div className="mt-1 text-xs text-muted-foreground flex items-center gap-2">
-									<span>{role.period}</span>
+						{/* Timeline Dot */}
+						<div className="absolute -left-[5px] md:-left-[5px] top-6 h-3 w-3 rounded-full border-2 border-primary bg-background ring-4 ring-background" />
+
+						<Card className="group overflow-hidden border-border/60 bg-card/50 shadow-sm hover:bg-card hover:shadow-md hover:border-primary/20 transition-all duration-300">
+							<CardHeader className="pb-3 pt-5 px-5 md:px-6">
+								<div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
+									<div className="flex items-start gap-4">
+										<div className="relative shrink-0 h-14 w-14 rounded-lg overflow-hidden border border-border shadow-sm group-hover:scale-105 transition-transform duration-300">
+											<Image
+												src={role.logo}
+												alt={`${role.company} logo`}
+												fill
+												className="object-contain p-1 bg-white"
+											/>
+										</div>
+										<div className="space-y-1.5">
+											<CardTitle className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+												{role.title}
+											</CardTitle>
+											<div className="text-base font-semibold text-muted-foreground flex items-center gap-2">
+												<BriefcaseIcon className="w-4 h-4" />
+												{role.company}
+											</div>
+										</div>
+									</div>
+									<Badge
+										variant="secondary"
+										className="w-fit flex items-center gap-1.5 px-3 py-1 text-sm font-medium bg-secondary/50"
+									>
+										<CalendarIcon className="w-3.5 h-3.5" />
+										{role.period}
+									</Badge>
 								</div>
-								<p className="mt-2 text-sm text-muted-foreground">
+							</CardHeader>
+
+							<CardContent className="px-5 md:px-6 pb-6 space-y-4">
+								<p className="text-base text-muted-foreground leading-relaxed">
 									{role.summary}
 								</p>
 
-								{/* Highlights — show first 2 by default, rest under "Show more" */}
-								<ul className="mt-3 list-disc pl-5 space-y-1 text-sm">
-									{role.highlights.slice(0, 2).map((h) => (
-										<li key={h.id}>{h.content}</li>
-									))}
-								</ul>
-								{role.highlights.length > 2 && (
-									<details className="mt-2">
-										<summary className="text-xs cursor-pointer select-none text-primary hover:underline">
-											Show more
-										</summary>
-										<ul className="mt-2 list-disc pl-5 space-y-1 text-sm">
-											{role.highlights.slice(2).map((h) => (
-												<li key={h.id}>{h.content}</li>
-											))}
-										</ul>
-									</details>
-								)}
-							</div>
-						</div>
-					</article>
+								{/* Highlights Section */}
+								<div className="space-y-3 pt-2">
+									<h4 className="text-sm font-semibold tracking-wide uppercase text-muted-foreground/80 flex items-center gap-2">
+										<CheckCircle2 className="w-4 h-4 text-primary" />
+										Key Highlights
+									</h4>
+									<ul className="space-y-3">
+										{role.highlights.map((h) => (
+											<li
+												key={h.id}
+												className="text-sm text-muted-foreground/90 pl-2 border-l-2 border-primary/20 flex gap-3"
+											>
+												<span className="leading-relaxed">{h.content}</span>
+											</li>
+										))}
+									</ul>
+								</div>
+							</CardContent>
+						</Card>
+					</FadeIn>
 				))}
-			</div>
+			</StaggerContainer>
 		</section>
 	);
 }

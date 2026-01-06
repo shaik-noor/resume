@@ -1,34 +1,21 @@
 "use client";
-import { SidebarTrigger, useSidebar } from "@/components/ui/sidebar";
-import { Separator } from "@/components/ui/separator";
-import { Button } from "@/components/ui/button";
-import { ExternalLink, PanelLeftIcon } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import { MobileSidebar } from "@/components/mobile-sidebar";
 import { ModeToggle } from "@/components/theme-toggle";
-import { UserIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useSidebarContext } from "@/contexts/sidebar-context";
 
 export default function HeaderBar() {
-	const { state, isMobile, openMobile } = useSidebar();
-
-	// Show name when the sidebar is collapsed (desktop) or closed (mobile).
-	const showName =
-		(!isMobile && state === "collapsed") || (isMobile && !openMobile);
+	const { isCollapsed } = useSidebarContext();
 
 	return (
-		<header className="sticky top-0 z-20 border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+		<header className="sticky top-0 z-20 border-b bg-background/70 backdrop-blur-md supports-[backdrop-filter]:bg-background/40">
 			<div className="flex h-14 items-center justify-between px-3">
-				{/* Left cluster: sidebar toggle and optional identity */}
+				{/* Left cluster: optional identity */}
 				<div className="flex items-center gap-3 min-w-0">
-					<SidebarTrigger aria-label="Toggle Sidebar">
-						<Button variant="ghost" size="icon">
-							<PanelLeftIcon className="size-4" />
-						</Button>
-					</SidebarTrigger>
-					<Separator orientation="vertical" className="h-6" />
-					{showName && (
+					<MobileSidebar />
+					{isCollapsed && (
 						<div className="flex items-center gap-2 truncate">
-							<div className="grid size-6 place-items-center rounded-md bg-primary text-primary-foreground">
-								<UserIcon className="size-4" />
-							</div>
 							<div className="flex min-w-0 flex-col">
 								<span className="truncate text-sm font-semibold">
 									Shaik Noor Mohammad

@@ -4,6 +4,7 @@ export const metadata = {
 };
 
 import CertificatesGrid from "@/components/certificates-grid";
+
 type Certificate = {
 	title: string;
 	image: string;
@@ -63,7 +64,8 @@ export default function CertificatesPage() {
 	const otherCertificates: Certificate[] = [
 		{
 			title: "Complete Web Developer",
-			image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/600px-JavaScript-logo.png",
+			image:
+				"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/600px-JavaScript-logo.png",
 			description: "Zero To Mastery Academy",
 			skills: ["Web Development", "Full Stack"],
 		},
@@ -77,20 +79,24 @@ export default function CertificatesPage() {
 			title: "Unix Essential Training",
 			image: "/assets/Unix-Essential-Training.png",
 			link: "https://www.linkedin.com/learning/certificates/cf4c365df01bca16733b77fdf2bc677a06d979acb3788a3f99a085e5a6741294",
-			description: "LinkedIn Learning. Learned the basics of working in Linux OS.",
+			description:
+				"LinkedIn Learning. Learned the basics of working in Linux OS.",
 			skills: ["Unix", "Linux"],
 		},
 		{
 			title: "Learning SQL Programming",
-			image: "https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png",
+			image:
+				"https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png",
 			description: "LinkedIn Learning",
 			skills: ["SQL", "Database"],
 		},
 		{
 			title: "Python for Data Science, AI & Development",
-			image: "https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~MS5SBOSEKEF0/CERTIFICATE_LANDING_PAGE~MS5SBOSEKEF0.jpeg",
+			image:
+				"https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~MS5SBOSEKEF0/CERTIFICATE_LANDING_PAGE~MS5SBOSEKEF0.jpeg",
 			link: "https://coursera.org/share/e3b62b29e6198c25263c839ebc6464eb",
-			description: "Coursera. Gained a strong foundation in Python programming.",
+			description:
+				"Coursera. Gained a strong foundation in Python programming.",
 			skills: ["Python", "Data Science"],
 		},
 	];

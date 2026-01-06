@@ -1,78 +1,136 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Resume & Portfolio Website
 
-## Getting Started
+A modern, high-performance personal portfolio and resume website built with the latest web technologies. This project showcases professional experience, skills, and projects in a sleek, responsive interface.
 
-First, run the development server:
+## 🚀 Tech Stack
+
+This project is built on a cutting-edge stack to ensure performance, type safety, and developer experience:
+
+- **Framework:** [Next.js 16 (App Router)](https://nextjs.org/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **UI Components:** [Components (shadcn/ui)](https://ui.shadcn.com/) based on Radix UI
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **Forms:** React Hook Form + Zod
+- **Email:** [Resend](https://resend.com/)
+- **Linting & Formatting:** [Biome](https://biomejs.dev/)
+- **Theming:** Next Themes (Dark/Light mode support)
+
+## ✨ key Features
+
+- **Modern UI/UX:** Clean, responsive design with dark mode support.
+- **Dynamic Routing:** Next.js App Router for seamless navigation.
+- **Interactive Elements:** Smooth animations and transitions using Framer Motion.
+- **Contact Form:** Functional contact form integrated with Resend for email delivery.
+- **PDF Resume:** Dedicated section for resume viewing/downloading.
+- **Optimized Performance:** Built with Next.js optimization features (Fonts, Images).
+- **Standalone Output:** Configured for easy Docker deployment (`output: "standalone"`).
+
+## 🛠️ Getting Started
+
+### Prerequisites
+
+- Node.js (Latest LTS recommended) or compatible runtime like Bun/See `package.json` for specifics.
+- npm, yarn, pnpm, or bun.
+
+### Installation
+
+1.  **Clone the repository:**
+
+    ```bash
+    git clone <repository-url>
+    cd resume.noruj.com
+    ```
+
+2.  **Install dependencies:**
+
+    ```bash
+    npm install
+    # or
+    pnpm install
+    # or
+    bun install
+    ```
+
+3.  **Environment Setup:**
+
+    Create a `.env.local` file in the root directory. You can start by copying the example:
+
+    ```bash
+    cp .env.example .env.local
+    ```
+
+    Update the `.env.local` file with your credentials:
+
+    ```bash
+    # Required: Resend API Key for contact form
+    RESEND_API_KEY=re_123456789
+
+    # Sender address (must be a verified domain in Resend)
+    CONTACT_FROM_EMAIL="Your Name <contact@yourdomain.com>"
+
+    # Optional: Destination email (defaults to s.noorink@gmail.com if not set)
+    CONTACT_TO_EMAIL=your_email@example.com
+    ```
+
+### Running Locally
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
-## Contact Form Email (Resend)
-
-This project uses [Resend](https://resend.com) to send emails from the contact form.
-
-### Setup
-
-1. Install dependencies (already included):
+### Build for Production
 
 ```bash
-npm i
+npm run build
+npm start
 ```
 
-2. Create a `.env.local` file at the project root and set:
+### Linting & Formatting
+
+This project uses **Biome** for fast linting and formatting.
 
 ```bash
-# Required: your Resend API key
-RESEND_API_KEY=your_resend_api_key_here
+# Lint and check
+npm run lint
 
-# Optional: destination email address for contact messages
-# Defaults to s.nootink@gmail.com if not set
-CONTACT_TO_EMAIL=your_destination_email@example.com
+# Lint and fix auto-fixable issues
+npm run lint:fix
 
-# Sender address used for Resend emails (must belong to a verified domain)
-# Example after verifying noruj.com: CONTACT_FROM_EMAIL="Shaik Noor <contact@noruj.com>"
-CONTACT_FROM_EMAIL="Shaik Noor <onboarding@resend.dev>"
+# Format code
+npm run format
 ```
 
-3. Run the dev server:
+## 📂 Project Structure
 
-```bash
-npm run dev
+```
+├── app/                  # Next.js App Router pages and API routes
+│   ├── about/            # About page
+│   ├── api/              # API routes (e.g., /api/contact)
+│   ├── certificates/     # Certificates page
+│   ├── contact/          # Contact page
+│   ├── educations/       # Education history
+│   ├── resume/           # Resume viewer
+│   ├── skills/           # Skills showcase
+│   └── work-experience/  # Work experience timeline
+├── components/           # React components
+│   ├── ui/               # Reusable UI components (shadcn/ui)
+│   └── ...               # Feature-specific components
+├── lib/                  # Utility functions
+├── public/               # Static assets (images, favicon)
+└── ...config files       # Configuration (next, tailwind, biome, etc.)
 ```
 
-The contact API route is available at `POST /api/contact` and expects JSON `{ name, email, message }`.
+## 📧 Contact Form Setup (Resend)
 
-### Domain verification (required to email other recipients)
-- In Resend dashboard, add and verify your domain (e.g., `noruj.com`).
-- Add the DNS records shown by Resend (DKIM/SPF) at your DNS provider.
-- Wait for DNS propagation, then click Verify in Resend.
-- Update `CONTACT_FROM_EMAIL` to an address on your verified domain (e.g., `contact@noruj.com`).
-- For local testing before verification, set `CONTACT_TO_EMAIL` to your Resend account email (e.g., `mail.noru.in@gmail.com`), since Resend restricts unverified sends to your own address.
+The contact form uses [Resend](https://resend.com) to send emails.
+
+1.  **Sign up** for Resend and get an API Key.
+2.  **Verify your domain** in the Resend dashboard to send emails from `contact@yourdomain.com`.
+    -   *Note: For testing without a verified domain, you can only send emails to your own registered Resend email address, and the "From" address must be `onboarding@resend.dev`.*
+3.  **Configure Environment Variables** as shown in the "Environment Setup" section above.
