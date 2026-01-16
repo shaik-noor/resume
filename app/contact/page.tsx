@@ -55,12 +55,7 @@ export default function ContactPage() {
 								<div className="space-y-1">
 									<p className="text-sm font-medium leading-none">Phone</p>
 									<div className="flex flex-col gap-1">
-										<Link
-											href="tel:+917799477206"
-											className="text-sm text-muted-foreground hover:text-primary transition-colors"
-										>
-											+91-7799477206
-										</Link>
+								
 										<Link
 											href="tel:+919398627571"
 											className="text-sm text-muted-foreground hover:text-primary transition-colors"
